@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <style>
+    .categories-wrapper {
+      display: flex;
+      max-width: 1087px;
+      flex-direction: column;
+      padding: 0 20px;
+    }
+    
+    .categories-title {
+      color: #000;
+      width: 100%;
+      font: 700 24px/150% 'Inter', sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+      .categories-title {
+        max-width: 100%;
+      }
+    }
+    
+    .categories-list {
+      margin-top: 49px;
+      width: 140%;
+    }
+    
+    @media (max-width: 991px) {
+      .categories-list {
+        max-width: 90%;
+        margin-top: 40px;
+      }
+    }
+    
+    .categories-flex {
+      gap: 20px;
+      display: flex;
+    }
+    
+    @media (max-width: 991px) {
+      .categories-flex {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0px;
+      }
+    }
+    
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      margin-left: 0;
+    }
+    
+    @media (max-width: 991px) {
+      .category-item {
+        width: 100%;
+      }
+    }
+    
+    .category-content {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+    }
+    
+    @media (max-width: 991px) {
+      .category-content {
+        margin-top: 37px;
+      }
+    }
+    
+    .image-wrapper {
+      border-radius: 15px;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1;
+      padding: 0 60px;
+    }
+    
+    @media (max-width: 991px) {
+      .image-wrapper {
+        padding: 0 20px;
+      }
+    }
+    
+    .category-image {
+      aspect-ratio: 1.15;
+      object-fit: scale-down;
+      object-position: center;
+      width: 161px;
+    }
+    
+    .category-title {
+      color: #000;
+      margin-top: 17px;
+      font: 500 16px/150% 'Inter', sans-serif;
+    }
+    
+    .category-item-2 {
+      margin-left: 20px;
+    }
+    
+    .category-image-2 {
+      aspect-ratio: 1.05;
+      object-fit: scale-down;
+      object-position: center;
+      width: 168px;
+    }
+    
+    @media (max-width: 991px) {
+      .category-item, .category-item-2 {
+        width: 100%;
+      }
+    }
+    </style>
+    
+    <section class="categories-wrapper">
+      <h2 class="categories-title">Top Categories</h2>
+      <div class="categories-list">
+        <div class="categories-flex">
+          
+          <article class="category-item">
+            <div class="category-content">
+              <div class="image-wrapper">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bfb2b6b71c119beafc7c4b5a02abfc5047b71aa7fecc03e84270d3e2c69ec28a?apiKey=215df029b3b44e4da98d0ee230cc29d5&" class="category-image" alt="Technology" />
+              </div>
+              <p class="category-title">Technology</p>
+            </div>
+          </article>
+          
+          <article class="category-item category-item-2">
+            <div class="category-content">
+              <div class="image-wrapper">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9d37d05bd82eeac01fba87aa1e5c18d932ab9ff2509389211fe3795f1a876705?apiKey=215df029b3b44e4da98d0ee230cc29d5&" class="category-image category-image-2" alt="AI For Programming" />
+              </div>
+              <p class="category-title">AI For Programming</p>
+            </div>
+          </article>
+          
+          <article class="category-item category-item-2">
+            <div class="category-content">
+              <div class="image-wrapper">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bfb2b6b71c119beafc7c4b5a02abfc5047b71aa7fecc03e84270d3e2c69ec28a?apiKey=215df029b3b44e4da98d0ee230cc29d5&" class="category-image" alt="Design" />
+              </div>
+              <p class="category-title">Design</p>
+            </div>
+          </article>
+          
+          <article class="category-item category-item-2">
+            <div class="category-content">
+              <div class="image-wrapper">
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bfb2b6b71c119beafc7c4b5a02abfc5047b71aa7fecc03e84270d3e2c69ec28a?apiKey=215df029b3b44e4da98d0ee230cc29d5&" class="category-image" alt="Design" />
+              </div>
+              <p class="category-title">Design</p>
+            </div>
+          </article>
+    
+        </div>
+      </div>
+    </section>
+</body>
+</html>

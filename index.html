@@ -1,108 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Responsive Website in HTML CSS</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/login_style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-  </head>
-  <body>
-    <main>
-      <!-- Header Start -->
-      <header>
-        <nav class="nav container">
-          <h2 class="nav_logo"><a href="#">Restful Website</a></h2>
 
-          <ul class="menu_items">
-            <img src="assets/images/times.svg" alt="timesicon" id="menu_toggle" />
-            <li><a href="#" class="nav_link">Home</a></li>
-            <li><a href="#" class="nav_link">About</a></li>
-            <li><a href="#" class="nav_link">Course</a></li>
-            <li><a id="form-open" class="btn-login">Login</a></li>
-            <li><a class="btn-signup">Sign up</a></li>
-          </ul>
-          <img src="assets/images/bars.svg" alt="timesicon" id="menu_toggle" />
-        </nav>
-      </header>
-      <!-- Header End -->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Responsive Website in HTML CSS</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/login_style.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+</head>
 
-      <!-- Login - SignUp Form Start -->
-      <section class="home">
-        <div class="form_container">
-          <i class="uil uil-times form_close"></i>
-          <!-- Login From -->
-          <div class="form login_form">
-            <form action="#">
-              <h2>Login</h2>
-  
-              <div class="input_box">
-                <input type="email" placeholder="Enter your email" required />
-                <i class="uil uil-envelope-alt email"></i>
-              </div>
-              <div class="input_box">
-                <input type="password" placeholder="Enter your password" required />
-                <i class="uil uil-lock password"></i>
-                <i class="uil uil-eye-slash pw_hide"></i>
-              </div>
-  
-              <div class="option_field">
-                <span class="checkbox">
-                  <input type="checkbox" id="check" />
-                  <label for="check">Remember me</label>
-                </span>
-                <a href="#" class="forgot_pw">Forgot password?</a>
-              </div>
-  
-              <button class="button-login">Login Now</button>
-  
-              <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
-            </form>
-          </div>
-  
-          <!-- Signup From -->
-          <div class="form signup_form">
-            <form action="#">
-              <h2>Signup</h2>
-  
-              <div class="input_box">
-                <input type="email" placeholder="Enter your email" required />
-                <i class="uil uil-envelope-alt email"></i>
-              </div>
-              <div class="input_box">
-                <input type="password" placeholder="Create password" required />
-                <i class="uil uil-lock password"></i>
-                <i class="uil uil-eye-slash pw_hide"></i>
-              </div>
-              <div class="input_box">
-                <input type="password" placeholder="Confirm password" required />
-                <i class="uil uil-lock password"></i>
-                <i class="uil uil-eye-slash pw_hide"></i>
-              </div>
-  
-              <button class="button-login">Signup Now</button>
-  
-              <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
-            </form>
-          </div>
+<body>
+  <main>
+    <!-- Header Start -->
+    <header>
+      <nav class="nav container">
+        <h2 class="nav_logo"><a href="#">Restful Website</a></h2>
+
+        <ul class="menu_items">
+          <img src="assets/images/times.svg" alt="timesicon" id="menu_toggle" />
+          <li><a href="#" class="nav_link">Home</a></li>
+          <li><a href="#" class="nav_link">About</a></li>
+          <li><a href="#" class="nav_link">Course</a></li>
+          <li><a id="form-open" class="btn-login">Login</a></li>
+          <li><a class="btn-signup">Sign up</a></li>
+        </ul>
+        <img src="assets/images/bars.svg" alt="timesicon" id="menu_toggle" />
+      </nav>
+    </header>
+    <!-- Header End -->
+
+    <!-- Login - SignUp Form Start -->
+    <section class="home">
+      <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+        <!-- Login From -->
+        <div class="form login_form">
+          <form action="#">
+            <h2>Login</h2>
+
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Enter your password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <div class="option_field">
+              <span class="checkbox">
+                <input type="checkbox" id="check" />
+                <label for="check">Remember me</label>
+              </span>
+              <a href="#" class="forgot_pw">Forgot password?</a>
+            </div>
+
+            <button class="button-login">Login Now</button>
+
+            <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+          </form>
         </div>
-      </section>
-      
-      <script src="assets/js/login_script.js"></script>
-      <!-- Login - SignUp Form End -->
 
-      <section class="hero">
-          <div class="column">
-            <img src="assets/images/home_banner.jpg" alt="heroImg" class="hero_img" />
-          </div>
-      </section>
+        <!-- Signup From -->
+        <div class="form signup_form">
+          <form action="#">
+            <h2>Signup</h2>
 
-      <section>
+            <div class="input_box">
+              <input type="email" placeholder="Enter your email" required />
+              <i class="uil uil-envelope-alt email"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Create password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+            <div class="input_box">
+              <input type="password" placeholder="Confirm password" required />
+              <i class="uil uil-lock password"></i>
+              <i class="uil uil-eye-slash pw_hide"></i>
+            </div>
+
+            <button class="button-login">Signup Now</button>
+
+            <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="assets/js/login_script.js"></script>
+    <!-- Login - SignUp Form End -->
+
+    <section class="hero">
+      <div class="column">
+        <img src="assets/images/home_banner.jpg" alt="heroImg" class="hero_img" />
+      </div>
+    </section>
+
+    <!-- <section>
         <div class="comment-container">
           <div class="comment-box-title">How learners like you are achieving their goals</div>
           <div class="div-3">
             <div class="comment-box">
-              <!-- Comment 1 -->
+             
               <div class="comment-detail">
                 <div class="div-15">
                   <img
@@ -126,7 +128,7 @@
                   </div> 
                 </div>
               </div>
-              <!-- Comment 2 -->
+              
               <div class="comment-detail">
                 <div class="div-15">
                   <img
@@ -150,7 +152,7 @@
                   </div>
                 </div>
               </div>
-              <!-- Comment 3 -->
+              
               <div class="comment-detail">
                 <div class="div-15">
                   <img
@@ -178,36 +180,213 @@
           </div>
         </div>
       </div>
-      </section>
+      </section> -->
+    <h2 class="testimonials-title">How learners like you are achieving their goals</h2>
+    <section class="testimonials">
 
-
-
-
-
-
-
-      
-
-      <section id="services" class="container">
-        <div class="service">
-          <img src="./img/service-1.png" alt="" />
-          <h1>Web Design</h1>
-          <p>
-            Custom web design for small businesses, we help you capture new
-            audiences and increase your sales.
-          </p>
+      <div class="testimonials-container">
+        <div class="testimonials-row">
+          <div class="testimonial-column">
+            <div class="testimonial-card">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/84aabab99cde080bb1ca9486553d3a754682892b68d84ebc4da29b3e3aa66c5c?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                alt="Testimonial icon" class="testimonial-icon" />
+              <p class="testimonial-text">
+                I am proud to say that after a few months of taking this course...I passed my exam and am now an AWS
+                Certified Cloud Practitioner! This content was exactly what the CCP exam covered.
+              </p>
+              <div class="testimonial-divider"></div>
+              <div class="testimonial-author">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d907e24627071c07df038cefd8f4d6d57620d4aee349c3e3e63197a866ed192?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                  alt="Author avatar" class="author-avatar" />
+                <span class="author-name">Thomas Edison</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-column">
+            <div class="testimonial-card">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/84aabab99cde080bb1ca9486553d3a754682892b68d84ebc4da29b3e3aa66c5c?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                alt="Testimonial icon" class="testimonial-icon" />
+              <p class="testimonial-text">
+                I am proud to say that after a few months of taking this course...I passed my exam and am now an AWS
+                Certified Cloud Practitioner! This content was exactly what the CCP exam covered.
+              </p>
+              <div class="testimonial-divider"></div>
+              <div class="testimonial-author">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d907e24627071c07df038cefd8f4d6d57620d4aee349c3e3e63197a866ed192?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                  alt="Author avatar" class="author-avatar" />
+                <span class="author-name">Thomas Edison</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-column">
+            <div class="testimonial-card">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/84aabab99cde080bb1ca9486553d3a754682892b68d84ebc4da29b3e3aa66c5c?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                alt="Testimonial icon" class="testimonial-icon" />
+              <p class="testimonial-text">
+                I am proud to say that after a few months of taking this course...I passed my exam and am now an AWS
+                Certified Cloud Practitioner! This content was exactly what the CCP exam covered.
+              </p>
+              <div class="testimonial-divider"></div>
+              <div class="testimonial-author">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d907e24627071c07df038cefd8f4d6d57620d4aee349c3e3e63197a866ed192?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                  alt="Author avatar" class="author-avatar" />
+                <span class="author-name">Thomas Edison</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </main>
 
-    <script>
-      const header = document.querySelector("header");
-      const menuToggler = document.querySelectorAll("#menu_toggle");
 
-      menuToggler.forEach(toggler => {
-        toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
-      });
-    </script>
-  </body>
+
+    <section class="categories-wrapper">
+      <h2 class="categories-title">Top Categories</h2>
+      <div class="categories-list">
+        <div class="categories-flex">
+
+          <article class="category-item">
+            <div class="category-content">
+              <div class="image-wrapper">
+                <img loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/bfb2b6b71c119beafc7c4b5a02abfc5047b71aa7fecc03e84270d3e2c69ec28a?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                  class="category-image" alt="Technology" />
+              </div>
+              <p class="category-title">Technology</p>
+            </div>
+          </article>
+
+          <article class="category-item category-item-2">
+            <div class="category-content">
+              <div class="image-wrapper">
+                <img loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/9d37d05bd82eeac01fba87aa1e5c18d932ab9ff2509389211fe3795f1a876705?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                  class="category-image category-image-2" alt="AI For Programming" />
+              </div>
+              <p class="category-title">AI For Programming</p>
+            </div>
+          </article>
+
+          <article class="category-item category-item-2">
+            <div class="category-content">
+              <div class="image-wrapper">
+                <img loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/bfb2b6b71c119beafc7c4b5a02abfc5047b71aa7fecc03e84270d3e2c69ec28a?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                  class="category-image" alt="Design" />
+              </div>
+              <p class="category-title">Design</p>
+            </div>
+          </article>
+
+          <article class="category-item category-item-2">
+            <div class="category-content">
+              <div class="image-wrapper">
+                <img loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/bfb2b6b71c119beafc7c4b5a02abfc5047b71aa7fecc03e84270d3e2c69ec28a?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                  class="category-image" alt="Design" />
+              </div>
+              <p class="category-title">Design</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <h2 class="testimonials-title">How learners like you are achieving their goals</h2>
+    <section class="testimonials">
+
+      <div class="testimonials-container">
+        <div class="testimonials-row">
+          <div class="testimonial-column">
+            <div class="testimonial-card">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/84aabab99cde080bb1ca9486553d3a754682892b68d84ebc4da29b3e3aa66c5c?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                alt="Testimonial icon" class="testimonial-icon" />
+              <p class="testimonial-text">
+                I am proud to say that after a few months of taking this course...I passed my exam and am now an AWS
+                Certified Cloud Practitioner! This content was exactly what the CCP exam covered.
+              </p>
+              <div class="testimonial-divider"></div>
+              <div class="testimonial-author">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d907e24627071c07df038cefd8f4d6d57620d4aee349c3e3e63197a866ed192?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                  alt="Author avatar" class="author-avatar" />
+                <span class="author-name">Thomas Edison</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-column">
+            <div class="testimonial-card">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/84aabab99cde080bb1ca9486553d3a754682892b68d84ebc4da29b3e3aa66c5c?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                alt="Testimonial icon" class="testimonial-icon" />
+              <p class="testimonial-text">
+                I am proud to say that after a few months of taking this course...I passed my exam and am now an AWS
+                Certified Cloud Practitioner! This content was exactly what the CCP exam covered.
+              </p>
+              <div class="testimonial-divider"></div>
+              <div class="testimonial-author">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d907e24627071c07df038cefd8f4d6d57620d4aee349c3e3e63197a866ed192?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                  alt="Author avatar" class="author-avatar" />
+                <span class="author-name">Thomas Edison</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-column">
+            <div class="testimonial-card">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/84aabab99cde080bb1ca9486553d3a754682892b68d84ebc4da29b3e3aa66c5c?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                alt="Testimonial icon" class="testimonial-icon" />
+              <p class="testimonial-text">
+                I am proud to say that after a few months of taking this course...I passed my exam and am now an AWS
+                Certified Cloud Practitioner! This content was exactly what the CCP exam covered.
+              </p>
+              <div class="testimonial-divider"></div>
+              <div class="testimonial-author">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/2d907e24627071c07df038cefd8f4d6d57620d4aee349c3e3e63197a866ed192?apiKey=215df029b3b44e4da98d0ee230cc29d5&"
+                  alt="Author avatar" class="author-avatar" />
+                <span class="author-name">Thomas Edison</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="services" class="container">
+      <div class="service">
+        <img src="./img/service-1.png" alt="" />
+        <h1>Web Design</h1>
+        <p>
+          Custom web design for small businesses, we help you capture new
+          audiences and increase your sales.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const header = document.querySelector("header");
+    const menuToggler = document.querySelectorAll("#menu_toggle");
+
+    menuToggler.forEach(toggler => {
+      toggler.addEventListener("click", () => header.classList.toggle("showMenu"));
+    });
+  </script>
+</body>
+
 </html>
