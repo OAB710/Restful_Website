@@ -240,7 +240,10 @@ a {
 
 
 
-
+.tmp
+{
+  background-color: #fbfbfb;
+}
 
   .testimonials {
     background-color: #fbfbfb;

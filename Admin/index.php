@@ -8,6 +8,39 @@
     <title>Admin details</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v5.15.4/css/all.css">
+    <!-- link icon -->
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+
+      href="/css/app-wa-8d95b745961f6b33ab3aa1b98a45291a.css?vsn=d"
+    >
+
+      <link
+        rel="stylesheet"
+
+        href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"
+      >
+
+      <link
+        rel="stylesheet"
+
+        href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-solid.css"
+      >
+
+      <link
+        rel="stylesheet"
+
+        href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-regular.css"
+      >
+
+      <link
+        rel="stylesheet"
+
+        href="https://site-assets.fontawesome.com/releases/v6.4.0/css/sharp-light.css"
+      >
 </head>
 
 <body>
@@ -34,20 +67,20 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="ManageUser.php">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
-                        <span class="title">Customers</span>
+                        <span class="title">Manage User</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="ManageCourse.php">
                         <span class="icon">
-                            <ion-icon name="chatbubble-outline"></ion-icon>
+                            <i class="fa-light fa-database"></i>
                         </span>
-                        <span class="title">Messages</span>
+                        <span class="title">Manage Course</span>
                     </a>
                 </li>
 
