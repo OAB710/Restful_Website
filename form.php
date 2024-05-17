@@ -17,7 +17,7 @@
         </div>
         <form class="card-form" action="add_course.php" method="POST">
           <div class="input">
-            <input type="text" name="Title" class="input-field" required />
+            <input type="text" name="Title" class="input-field"  />
             <label class="input-label">Title</label>
           </div>
           <div class="input">
@@ -25,7 +25,7 @@
               name="Content"
               class="input-field"
               rows="5"
-              required
+              
               style="resize: none; overflow: hidden"
             ></textarea>
             <label class="input-label">Content</label>
