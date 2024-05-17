@@ -88,15 +88,21 @@ function get_course($id)
   $data = get_connection();
   $course_data = $data['Course'];
 
+  $matching_courses = [];
+
   foreach ($course_data as $course) {
     if ($course['CID'] == $id) {
-      echo json_encode($course, JSON_PRETTY_PRINT);
-      return $course;
-
+      $matching_courses[] = $course;
     }
   }
-  echo "Course not found";
-  return null;
+
+  if (!empty($matching_courses)) {
+    echo json_encode($matching_courses, JSON_PRETTY_PRINT);
+    return $matching_courses;
+  } else {
+    echo json_encode(['message' => 'Course not found'], JSON_PRETTY_PRINT);
+    return null;
+  }
 }
 
 function delete_course($id)

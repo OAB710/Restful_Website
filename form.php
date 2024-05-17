@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css\formpostcourse_style.css" />
+    <link rel="stylesheet" href="css/formpostcourse_style.css" />
   </head>
   <body>
     <div class="container">
-      <!-- code here -->
       <div class="card">
         <div class="card-image">
           <h2 class="card-heading">
@@ -16,13 +15,14 @@
             <small>Course for everyone</small>
           </h2>
         </div>
-        <form class="card-form">
+        <form class="card-form" action="add_course.php" method="POST">
           <div class="input">
-            <input type="text" class="input-field" value="" required />
+            <input type="text" name="Title" class="input-field" required />
             <label class="input-label">Title</label>
           </div>
           <div class="input">
             <textarea
+              name="Content"
               class="input-field"
               rows="5"
               required
@@ -31,7 +31,7 @@
             <label class="input-label">Content</label>
           </div>
           <div class="action">
-            <button class="action-button">Get started</button>
+            <button type="submit" class="action-button">Get started</button>
           </div>
         </form>
       </div>
