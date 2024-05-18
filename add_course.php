@@ -12,7 +12,10 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 $title = $_POST['Title'] ?? null;
 $content = $_POST['Content'] ?? null;
-$date = date('Y-m-d'); // Lấy ngày hiện tại
+$duration = $_POST['Duration'] ?? null;
+$type = $_POST['Type'] ?? null;
+$location = $_POST['Location'] ?? null;
+$date = date('Y-m-d');
 
 if (is_null($title) || is_null($content)) {
     http_response_code(400);
@@ -29,10 +32,19 @@ $course = (object) array(
     'UID' => 100,
     'Title' => $title,
     'Content' => $content,
+    'Duration' => $duration,
+    'Type' => $type,
+    'Location' => $location,
     'Date' => $date
 );
+
+
 
 // Thêm course vào database
 add_course($course);
 
 ?>
+
+<script>
+              window.location.href = 'course.php';
+            </script>

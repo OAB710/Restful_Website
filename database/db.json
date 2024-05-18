@@ -1,291 +1,301 @@
 {
-  "User": [
-    {
-      "UID": 1,
-      "UName": "john_doe",
-      "Email": "john@example.com",
-      "Password": "password123"
-    },
-    {
-      "UID": 2,
-      "UName": "jane_smith",
-      "Email": "jane@example.com",
-      "Password": "abc123"
-    },
-    {
-      "UID": 3,
-      "UName": "alice_jones",
-      "Email": "alice@example.com",
-      "Password": "alice2024"
-    },
-    {
-      "UID": 4,
-      "UName": "bob_brown",
-      "Email": "bob@example.com",
-      "Password": "bob2024"
-    },
-    {
-      "UID": 5,
-      "UName": "charlie_clark",
-      "Email": "charlie@example.com",
-      "Password": "charlie2024"
-    }
-  ],
-  "Course": [
-    {
-      "CID": 1,
-      "UID": 1,
-      "Title": "Introduction to Electronics",
-      "Content": "This course introduces the basics of electronics.",
-      "Duration": "2 hours",
-      "Type": "Beginner",
-      "Location": "Ho Chi Minh",
-      "Category": [
+    "User": [
         {
-          "CAName": "Electronics"
+            "UID": 1,
+            "UName": "john_doe",
+            "Email": "john@example.com",
+            "Password": "password123"
         },
         {
-          "CAName": "Engineering"
-        }
-      ]
-    },
-    {
-      "CID": 2,
-      "UID": 1,
-      "Title": "Introduction to Software",
-      "Content": "This course introduces the basics of software development.",
-      "Duration": "2 hours",
-      "Type": "Beginner",
-      "Location": "Ha Noi",
-      "Category": [
-        {
-          "CAName": "Software"
+            "UID": 2,
+            "UName": "jane_smith",
+            "Email": "jane@example.com",
+            "Password": "abc123"
         },
         {
-          "CAName": "Technology"
-        }
-      ]
-    },
-    {
-      "CID": 3,
-      "UID": 2,
-      "Title": "Advanced Electronics",
-      "Content": "This course covers Advanced topics in electronics.",
-      "Duration": "2 hours",
-      "Type": "Advanced",
-      "Location": "Da Nang",
-      "Category": [
-        {
-          "CAName": "Electronics"
+            "UID": 3,
+            "UName": "alice_jones",
+            "Email": "alice@example.com",
+            "Password": "alice2024"
         },
         {
-          "CAName": "Engineering"
-        }
-      ]
-    },
-    {
-      "CID": 4,
-      "UID": 2,
-      "Title": "Basic Home Decor",
-      "Content": "This course covers the basics of home decor.",
-      "Duration": "2 hours",
-      "Type": "Beginner",
-      "Location": "Can Tho",
-      "Category": [
-        {
-          "CAName": "Home Decor"
+            "UID": 4,
+            "UName": "bob_brown",
+            "Email": "bob@example.com",
+            "Password": "bob2024"
         },
         {
-          "CAName": "Lifestyle"
+            "UID": 5,
+            "UName": "charlie_clark",
+            "Email": "charlie@example.com",
+            "Password": "charlie2024"
         }
-      ]
-    },
-    {
-      "CID": 5,
-      "UID": 3,
-      "Title": "Gardening 101",
-      "Content": "This course covers the basics of gardening.",
-      "Duration": "2 hours",
-      "Type": "Beginner",
-      "Location": "Hai Phong",
-      "Category": [
+    ],
+    "Course": [
         {
-          "CAName": "Gardening"
+            "CID": 1,
+            "UID": 1,
+            "Title": "Introduction to Electronics",
+            "Content": "This course introduces the basics of electronics.",
+            "Duration": "2 hours",
+            "Type": "Beginner",
+            "Location": "Ho Chi Minh",
+            "Category": [
+                {
+                    "CAName": "Electronics"
+                },
+                {
+                    "CAName": "Engineering"
+                }
+            ]
         },
         {
-          "CAName": "Hobby"
-        }
-      ]
-    },
-    {
-      "CID": 6,
-      "UID": 3,
-      "Title": "Advanced Gardening",
-      "Content": "This course covers Advanced gardening techniques.",
-      "Duration": "2 hours",
-      "Type": "Advanced",
-      "Location": "Hue",
-      "Category": [
-        {
-          "CAName": "Gardening"
+            "CID": 2,
+            "UID": 1,
+            "Title": "Introduction to Software",
+            "Content": "This course introduces the basics of software development.",
+            "Duration": "2 hours",
+            "Type": "Beginner",
+            "Location": "Ha Noi",
+            "Category": [
+                {
+                    "CAName": "Software"
+                },
+                {
+                    "CAName": "Technology"
+                }
+            ]
         },
         {
-          "CAName": "Hobby"
-        }
-      ]
-    },
-    {
-      "CID": 7,
-      "UID": 4,
-      "Title": "Cooking Basics",
-      "Content": "This course introduces basic cooking techniques.",
-      "Duration": "2 hours",
-      "Type": "Beginner",
-      "Location": "Quang Ninh",
-      "Category": [
-        {
-          "CAName": "Cooking"
+            "CID": 3,
+            "UID": 2,
+            "Title": "Advanced Electronics",
+            "Content": "This course covers Advanced topics in electronics.",
+            "Duration": "2 hours",
+            "Type": "Advanced",
+            "Location": "Da Nang",
+            "Category": [
+                {
+                    "CAName": "Electronics"
+                },
+                {
+                    "CAName": "Engineering"
+                }
+            ]
         },
         {
-          "CAName": "Lifestyle"
-        }
-      ]
-    },
-    {
-      "CID": 8,
-      "UID": 4,
-      "Title": "Advanced Cooking",
-      "Content": "This course covers Advanced cooking techniques.",
-      "Duration": "2 hours",
-      "Type": "Advanced",
-      "Location": "Dak Lak",
-      "Category": [
-        {
-          "CAName": "Cooking"
+            "CID": 4,
+            "UID": 2,
+            "Title": "Basic Home Decor",
+            "Content": "This course covers the basics of home decor.",
+            "Duration": "2 hours",
+            "Type": "Beginner",
+            "Location": "Can Tho",
+            "Category": [
+                {
+                    "CAName": "Home Decor"
+                },
+                {
+                    "CAName": "Lifestyle"
+                }
+            ]
         },
         {
-          "CAName": "Lifestyle"
-        }
-      ]
-    },
-    {
-      "CID": 9,
-      "UID": 5,
-      "Title": "Photography Basics",
-      "Content": "This course covers the basics of photography.",
-      "Duration": "2 hours",
-      "Type": "Beginner",
-      "Location": "Binh Thuan",
-      "Category": [
-        {
-          "CAName": "Photography"
+            "CID": 5,
+            "UID": 3,
+            "Title": "Gardening 101",
+            "Content": "This course covers the basics of gardening.",
+            "Duration": "2 hours",
+            "Type": "Beginner",
+            "Location": "Hai Phong",
+            "Category": [
+                {
+                    "CAName": "Gardening"
+                },
+                {
+                    "CAName": "Hobby"
+                }
+            ]
         },
         {
-          "CAName": "Art"
-        }
-      ]
-    },
-    {
-      "CID": 10,
-      "UID": 5,
-      "Title": "Advanced Photography",
-      "Content": "This course covers Advanced photography techniques.",
-      "Duration": "2 hours",
-      "Type": "Advanced",
-      "Location": "Lam Dong",
-      "Category": [
-        {
-          "CAName": "Photography"
+            "CID": 6,
+            "UID": 3,
+            "Title": "Advanced Gardening",
+            "Content": "This course covers Advanced gardening techniques.",
+            "Duration": "2 hours",
+            "Type": "Advanced",
+            "Location": "Hue",
+            "Category": [
+                {
+                    "CAName": "Gardening"
+                },
+                {
+                    "CAName": "Hobby"
+                }
+            ]
         },
         {
-          "CAName": "Art"
-        }
-      ]
-    },
-    {
-      "CID": 11,
-      "UID": 1,
-      "Title": "Introduction to AI",
-      "Content": "This course introduces the basics of artificial intelligence.",
-      "Duration": "2 hours",
-      "Type": "Beginner",
-      "Location": "Vinh Long",
-      "Category": [
-        {
-          "CAName": "Artificial Intelligence"
+            "CID": 7,
+            "UID": 4,
+            "Title": "Cooking Basics",
+            "Content": "This course introduces basic cooking techniques.",
+            "Duration": "2 hours",
+            "Type": "Beginner",
+            "Location": "Quang Ninh",
+            "Category": [
+                {
+                    "CAName": "Cooking"
+                },
+                {
+                    "CAName": "Lifestyle"
+                }
+            ]
         },
         {
-          "CAName": "Technology"
-        }
-      ]
-    },
-    {
-      "CID": 12,
-      "UID": 2,
-      "Title": "Machine Learning Basics",
-      "Content": "This course covers the basics of machine learning.",
-      "Duration": "2 hours",
-      "Type": "Intermediate",
-      "Location": "Tra Vinh",
-      "Category": [
-        {
-          "CAName": "Machine Learning"
+            "CID": 8,
+            "UID": 4,
+            "Title": "Advanced Cooking",
+            "Content": "This course covers Advanced cooking techniques.",
+            "Duration": "2 hours",
+            "Type": "Advanced",
+            "Location": "Dak Lak",
+            "Category": [
+                {
+                    "CAName": "Cooking"
+                },
+                {
+                    "CAName": "Lifestyle"
+                }
+            ]
         },
         {
-          "CAName": "Technology"
-        }
-      ]
-    },
-    {
-      "CID": 13,
-      "UID": 3,
-      "Title": "Data Science Introduction",
-      "Content": "This course introduces the basics of data science.",
-      "Duration": "2 hours",
-      "Type": "Intermediate",
-      "Location": "Bac Lieu",
-      "Category": [
-        {
-          "CAName": "Data Science"
+            "CID": 9,
+            "UID": 5,
+            "Title": "Photography Basics",
+            "Content": "This course covers the basics of photography.",
+            "Duration": "2 hours",
+            "Type": "Beginner",
+            "Location": "Binh Thuan",
+            "Category": [
+                {
+                    "CAName": "Photography"
+                },
+                {
+                    "CAName": "Art"
+                }
+            ]
         },
         {
-          "CAName": "Technology"
-        }
-      ]
-    },
-    {
-      "CID": 14,
-      "UID": 4,
-      "Title": "Cloud Computing Basics",
-      "Content": "This course covers the basics of cloud computing.",
-      "Duration": "2 hours",
-      "Type": "Intermediate",
-      "Location": "Tien Giang",
-      "Category": [
-        {
-          "CAName": "Cloud Computing"
+            "CID": 10,
+            "UID": 5,
+            "Title": "Advanced Photography",
+            "Content": "This course covers Advanced photography techniques.",
+            "Duration": "2 hours",
+            "Type": "Advanced",
+            "Location": "Lam Dong",
+            "Category": [
+                {
+                    "CAName": "Photography"
+                },
+                {
+                    "CAName": "Art"
+                }
+            ]
         },
         {
-          "CAName": "Technology"
-        }
-      ]
-    },
-    {
-      "CID": 15,
-      "UID": 5,
-      "Title": "Cybersecurity Fundamentals",
-      "Content": "This course introduces the basics of cybersecurity.",
-      "Duration": "2 hours",
-      "Type": "Advanced",
-      "Location": "Kien Giang",
-      "Category": [
-        {
-          "CAName": "Cybersecurity"
+            "CID": 11,
+            "UID": 1,
+            "Title": "Introduction to AI",
+            "Content": "This course introduces the basics of artificial intelligence.",
+            "Duration": "2 hours",
+            "Type": "Beginner",
+            "Location": "Vinh Long",
+            "Category": [
+                {
+                    "CAName": "Artificial Intelligence"
+                },
+                {
+                    "CAName": "Technology"
+                }
+            ]
         },
         {
-          "CAName": "Technology"
+            "CID": 12,
+            "UID": 2,
+            "Title": "Machine Learning Basics",
+            "Content": "This course covers the basics of machine learning.",
+            "Duration": "2 hours",
+            "Type": "Intermediate",
+            "Location": "Tra Vinh",
+            "Category": [
+                {
+                    "CAName": "Machine Learning"
+                },
+                {
+                    "CAName": "Technology"
+                }
+            ]
+        },
+        {
+            "CID": 13,
+            "UID": 3,
+            "Title": "Data Science Introduction",
+            "Content": "This course introduces the basics of data science.",
+            "Duration": "2 hours",
+            "Type": "Intermediate",
+            "Location": "Bac Lieu",
+            "Category": [
+                {
+                    "CAName": "Data Science"
+                },
+                {
+                    "CAName": "Technology"
+                }
+            ]
+        },
+        {
+            "CID": 14,
+            "UID": 4,
+            "Title": "Cloud Computing Basics",
+            "Content": "This course covers the basics of cloud computing.",
+            "Duration": "2 hours",
+            "Type": "Intermediate",
+            "Location": "Tien Giang",
+            "Category": [
+                {
+                    "CAName": "Cloud Computing"
+                },
+                {
+                    "CAName": "Technology"
+                }
+            ]
+        },
+        {
+            "CID": 15,
+            "UID": 5,
+            "Title": "Cybersecurity Fundamentals",
+            "Content": "This course introduces the basics of cybersecurity.",
+            "Duration": "2 hours",
+            "Type": "Advanced",
+            "Location": "Kien Giang",
+            "Category": [
+                {
+                    "CAName": "Cybersecurity"
+                },
+                {
+                    "CAName": "Technology"
+                }
+            ]
+        },
+        {
+            "CID": 100,
+            "UID": 100,
+            "Title": "sd",
+            "Content": "sd",
+            "Duration": "sd",
+            "Type": "sd",
+            "Location": "sd",
+            "Date": "2024-05-18"
         }
-      ]
-    }
-  ]
+    ]
 }

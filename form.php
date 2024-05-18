@@ -21,6 +21,18 @@
             <label class="input-label">Title</label>
           </div>
           <div class="input">
+            <input type="text" name="Duration" class="input-field"  />
+            <label class="input-label">Duration</label>
+          </div>
+          <div class="input">
+            <input type="text" name="Type" class="input-field"  />
+            <label class="input-label">Type</label>
+          </div>
+          <div class="input">
+            <input type="text" name="Location" class="input-field"  />
+            <label class="input-label">Location</label>
+          </div>
+          <div class="input">
             <textarea
               name="Content"
               class="input-field"
@@ -33,6 +45,7 @@
           <div class="action">
             <button type="submit" class="action-button">Get started</button>
           </div>
+          
         </form>
       </div>
     </div>

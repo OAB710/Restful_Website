@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'GET') {
     die(json_encode($data));
 }
 
-$id = get_id();
+$id = $_GET['CID'];
 //GET DATA FROM DATABASE
 get_course($id);
 ?>
