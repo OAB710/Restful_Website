@@ -1,79 +1,291 @@
 {
-    "User": [
+  "User": [
+    {
+      "UID": 1,
+      "UName": "john_doe",
+      "Email": "john@example.com",
+      "Password": "password123"
+    },
+    {
+      "UID": 2,
+      "UName": "jane_smith",
+      "Email": "jane@example.com",
+      "Password": "abc123"
+    },
+    {
+      "UID": 3,
+      "UName": "alice_jones",
+      "Email": "alice@example.com",
+      "Password": "alice2024"
+    },
+    {
+      "UID": 4,
+      "UName": "bob_brown",
+      "Email": "bob@example.com",
+      "Password": "bob2024"
+    },
+    {
+      "UID": 5,
+      "UName": "charlie_clark",
+      "Email": "charlie@example.com",
+      "Password": "charlie2024"
+    }
+  ],
+  "Course": [
+    {
+      "CID": 1,
+      "UID": 1,
+      "Title": "Introduction to Electronics",
+      "Content": "This course introduces the basics of electronics.",
+      "Duration": "2 hours",
+      "Type": "Beginner",
+      "Location": "Ho Chi Minh",
+      "Category": [
         {
-            "UID": 1,
-            "UName": "john_doe",
-            "Email": "john@example.com",
-            "Password": "password123"
+          "CAName": "Electronics"
         },
         {
-            "UID": 2,
-            "UName": "jane_smith",
-            "Email": "jane@example.com",
-            "Password": "abc123"
+          "CAName": "Engineering"
         }
-    ],
-    "Course": [
+      ]
+    },
+    {
+      "CID": 2,
+      "UID": 1,
+      "Title": "Introduction to Software",
+      "Content": "This course introduces the basics of software development.",
+      "Duration": "2 hours",
+      "Type": "Beginner",
+      "Location": "Ha Noi",
+      "Category": [
         {
-            "CID": 1,
-            "UID": 1,
-            "Title": "Introduction to Electronics",
-            "Content": "This blog post introduces the basics of electronics.",
-            "Date": "2024-05-07"
+          "CAName": "Software"
         },
         {
-            "CID": 2,
-            "Title": "Introduction to Software",
-            "Content": "This blog post introduces the basics of electronics.",
-            "Date": "2024-05-07"
-        },
-        {
-            "CID": 23,
-            "UID": 2,
-            "Title": "Video",
-            "Content": "Ready to be imaginative",
-            "Date": "2024-05-07"
-        },
-        {
-            "CID": 5,
-            "UID": 1,
-            "Title": "Water",
-            "Content": "This blog post introduces the basics of electronics.",
-            "Date": "2024-05-07"
-        },
-        {
-            "CID": 100,
-            "UID": 100,
-            "Title": "fff",
-            "Content": "fff",
-            "Date": "2024-05-17"
-        },
-        {
-            "CID": 100,
-            "UID": 100,
-            "Title": "fff",
-            "Content": "fffs\r\nd\r\nd\r\nd\r\nd\r\nd",
-            "Date": "2024-05-17"
+          "CAName": "Technology"
         }
-    ],
-    "Category": [
+      ]
+    },
+    {
+      "CID": 3,
+      "UID": 2,
+      "Title": "Advanced Electronics",
+      "Content": "This course covers Advanced topics in electronics.",
+      "Duration": "2 hours",
+      "Type": "Advanced",
+      "Location": "Da Nang",
+      "Category": [
         {
-            "CAID": 1,
-            "CAName": "Electronics"
+          "CAName": "Electronics"
         },
         {
-            "CID": 2,
-            "CAName": "Home Decor"
+          "CAName": "Engineering"
         }
-    ],
-    "Course_Category": [
+      ]
+    },
+    {
+      "CID": 4,
+      "UID": 2,
+      "Title": "Basic Home Decor",
+      "Content": "This course covers the basics of home decor.",
+      "Duration": "2 hours",
+      "Type": "Beginner",
+      "Location": "Can Tho",
+      "Category": [
         {
-            "CID": 1,
-            "CAID": 1
+          "CAName": "Home Decor"
         },
         {
-            "CID": 2,
-            "CAID": 2
+          "CAName": "Lifestyle"
         }
-    ]
+      ]
+    },
+    {
+      "CID": 5,
+      "UID": 3,
+      "Title": "Gardening 101",
+      "Content": "This course covers the basics of gardening.",
+      "Duration": "2 hours",
+      "Type": "Beginner",
+      "Location": "Hai Phong",
+      "Category": [
+        {
+          "CAName": "Gardening"
+        },
+        {
+          "CAName": "Hobby"
+        }
+      ]
+    },
+    {
+      "CID": 6,
+      "UID": 3,
+      "Title": "Advanced Gardening",
+      "Content": "This course covers Advanced gardening techniques.",
+      "Duration": "2 hours",
+      "Type": "Advanced",
+      "Location": "Hue",
+      "Category": [
+        {
+          "CAName": "Gardening"
+        },
+        {
+          "CAName": "Hobby"
+        }
+      ]
+    },
+    {
+      "CID": 7,
+      "UID": 4,
+      "Title": "Cooking Basics",
+      "Content": "This course introduces basic cooking techniques.",
+      "Duration": "2 hours",
+      "Type": "Beginner",
+      "Location": "Quang Ninh",
+      "Category": [
+        {
+          "CAName": "Cooking"
+        },
+        {
+          "CAName": "Lifestyle"
+        }
+      ]
+    },
+    {
+      "CID": 8,
+      "UID": 4,
+      "Title": "Advanced Cooking",
+      "Content": "This course covers Advanced cooking techniques.",
+      "Duration": "2 hours",
+      "Type": "Advanced",
+      "Location": "Dak Lak",
+      "Category": [
+        {
+          "CAName": "Cooking"
+        },
+        {
+          "CAName": "Lifestyle"
+        }
+      ]
+    },
+    {
+      "CID": 9,
+      "UID": 5,
+      "Title": "Photography Basics",
+      "Content": "This course covers the basics of photography.",
+      "Duration": "2 hours",
+      "Type": "Beginner",
+      "Location": "Binh Thuan",
+      "Category": [
+        {
+          "CAName": "Photography"
+        },
+        {
+          "CAName": "Art"
+        }
+      ]
+    },
+    {
+      "CID": 10,
+      "UID": 5,
+      "Title": "Advanced Photography",
+      "Content": "This course covers Advanced photography techniques.",
+      "Duration": "2 hours",
+      "Type": "Advanced",
+      "Location": "Lam Dong",
+      "Category": [
+        {
+          "CAName": "Photography"
+        },
+        {
+          "CAName": "Art"
+        }
+      ]
+    },
+    {
+      "CID": 11,
+      "UID": 1,
+      "Title": "Introduction to AI",
+      "Content": "This course introduces the basics of artificial intelligence.",
+      "Duration": "2 hours",
+      "Type": "Beginner",
+      "Location": "Vinh Long",
+      "Category": [
+        {
+          "CAName": "Artificial Intelligence"
+        },
+        {
+          "CAName": "Technology"
+        }
+      ]
+    },
+    {
+      "CID": 12,
+      "UID": 2,
+      "Title": "Machine Learning Basics",
+      "Content": "This course covers the basics of machine learning.",
+      "Duration": "2 hours",
+      "Type": "Intermediate",
+      "Location": "Tra Vinh",
+      "Category": [
+        {
+          "CAName": "Machine Learning"
+        },
+        {
+          "CAName": "Technology"
+        }
+      ]
+    },
+    {
+      "CID": 13,
+      "UID": 3,
+      "Title": "Data Science Introduction",
+      "Content": "This course introduces the basics of data science.",
+      "Duration": "2 hours",
+      "Type": "Intermediate",
+      "Location": "Bac Lieu",
+      "Category": [
+        {
+          "CAName": "Data Science"
+        },
+        {
+          "CAName": "Technology"
+        }
+      ]
+    },
+    {
+      "CID": 14,
+      "UID": 4,
+      "Title": "Cloud Computing Basics",
+      "Content": "This course covers the basics of cloud computing.",
+      "Duration": "2 hours",
+      "Type": "Intermediate",
+      "Location": "Tien Giang",
+      "Category": [
+        {
+          "CAName": "Cloud Computing"
+        },
+        {
+          "CAName": "Technology"
+        }
+      ]
+    },
+    {
+      "CID": 15,
+      "UID": 5,
+      "Title": "Cybersecurity Fundamentals",
+      "Content": "This course introduces the basics of cybersecurity.",
+      "Duration": "2 hours",
+      "Type": "Advanced",
+      "Location": "Kien Giang",
+      "Category": [
+        {
+          "CAName": "Cybersecurity"
+        },
+        {
+          "CAName": "Technology"
+        }
+      ]
+    }
+  ]
 }
