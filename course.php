@@ -38,6 +38,62 @@
   <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
   <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg">
   <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
+  <style>
+        #location-btn {
+            box-sizing: border-box;
+            padding: 10px 20px;
+            border: 2px solid #000; /* Border width and color */
+            border-radius: 5px; /* Optional: Rounded corners */
+            background-color: #f8f9fa; /* Optional: Background color */
+            color: #000; /* Text color */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 40px;
+            transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+        }
+        #Category-btn {
+            box-sizing: border-box;
+            padding: 10px 20px;
+            border: 2px solid #000; /* Border width and color */
+            border-radius: 5px; /* Optional: Rounded corners */
+            background-color: #f8f9fa; /* Optional: Background color */
+            color: #000; /* Text color */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 40px;
+            transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+        }
+        .location-item, .Category-item {
+        box-sizing: border-box;
+        padding: 10px 20px;
+        border: 0.5px solid #000; /* Border width and color */
+        border-radius: 40px; /* Rounded corners */
+        background-color: #f8f9fa; /* Background color */
+        color: #000; /* Text color */
+        font-size: 16px; /* Font size */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+        display: inline-block; /* Ensure they align properly */
+        width: 150px; /* Fixed width */
+        height: 50px; /* Fixed height */
+        text-align: center; /* Center the text */
+        line-height: 30px; /* Center text vertically */
+        margin: 5px; /* Spacing between items */
+    }
+
+    .location-item:hover, .Category-item:hover {
+        background-color: #e2e6ea; /* Background color on hover */
+        color: #333; /* Text color on hover */
+    }
+        #location-btn:hover {
+            background-color: #e2e6ea; /* Background color on hover */
+            color: #333; /* Text color on hover */
+        }
+        #search-container:hover
+        {
+          background-color: #000;
+        }
+    </style>
 
 </head>
 
@@ -122,7 +178,7 @@
           </button>
 
         </div>
-        <button type="button" id="location-btn" aria-label="Filter by Location">
+        <button style="box-sizing: border-box;" type="button" id="location-btn" aria-label="Filter by Location">
       Filter by Location
     </button>
     <div id="location-list" style="display: none;">

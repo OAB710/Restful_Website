@@ -62,6 +62,23 @@ function get_location()
 
   return $location;
 }
+function get_category()
+{
+  $request_uri = $_SERVER['REQUEST_URI'];
+  $path_parts = explode('?', $request_uri);
+
+  $category = '';
+  foreach ($path_parts as $part) {
+    if (strpos($part, 'Category=') !== false) {
+      $category = str_replace('Category=', '', $part);
+      // Giải mã URL
+      $category = urldecode($category);
+      break;
+    }
+  }
+
+  return $category;
+}
 
 
 function get_courses()
@@ -159,7 +176,8 @@ function admin_get_courses()
                   <td>{$course['Category']}</td>
                   <td>{$course['Date']}</td>
                   <td>
-                      <a style='padding: 2px;' href='#'><i class='fa-solid fa-pencil' style='color: #74C0FC;'></i></a>
+                  <a style='padding: 2px;' href='formEditCourse.php?CID={$course['CID']}'><i class='fa-solid fa-pencil' style='color: #74C0FC;'></i></a>
+                      
                       <form action='delete_course.php' method='POST' style='display:inline;'>
                               <input type='hidden' name='_method' value='DELETE'>
                               <input type='hidden' name='CID' value='{$course['CID']}'>
@@ -316,29 +334,20 @@ function search_course_by_title($title)
       <span class='span'>3 Weeks</span> 
     </div>
     <div class='card-content'>
-      <span class='badge'>Intermediate</span> 
+      <span class='badge'>{$course['Type']}</span> 
           <h3 class='h3'>
-            <a href='#' class='card-title'>{$course['Title']}</a>
+            <a href='course_detail.php?CID={$course['CID']}' class='card-title'>{$course['Title']}</a>
           </h3>
-          <div class='wrapper'>
-            <div class='rating-wrapper'>
-              <ion-icon name='star'></ion-icon>
-              <ion-icon name='star'></ion-icon>
-              <ion-icon name='star'></ion-icon>
-              <ion-icon name='star'></ion-icon>
-              <ion-icon name='star'></ion-icon>
-            </div>
-            <p class='rating-text'>(4.9 /7 Rating)</p> 
-          </div>
-          <data class='price' value='35'>$35.00</data> 
+          
+          <data class='price' value=''>{$course['Duration']}</data> 
           <ul class='card-meta-list'>
             <li class='card-meta-item'>
-              <ion-icon name='library-outline' aria-hidden='true'></ion-icon>
-              <span class='span'>13 Lessons</span> 
+              <ion-icon name='location-outline' aria-hidden='true'></ion-icon>
+              <span class='span'>{$course['Location']}</span> 
             </li>
             <li class='card-meta-item'>
-              <ion-icon name='people-outline' aria-hidden='true'></ion-icon>
-              <span class='span'>18 Students</span> 
+              <ion-icon name='bookmark-outline' aria-hidden='true'></ion-icon>
+              <span class='span'>{$course['Category']}</span> 
             </li>
           </ul>
         </div>
@@ -368,44 +377,36 @@ function filter_course_by_location($location)
   if (!empty($matching_courses)) {
     foreach ($matching_courses as $course) {
       echo "
-          <li>
-              <div class='course-card'>
-                  <figure class='card-banner img-holder' style='--width: 370; --height: 220;'>
-                      <img src='./assets/images/course-3.jpg' width='370' height='220' loading='lazy' alt='The Complete Camtasia Course for Content Creators' class='img-cover'>
-                  </figure>
-                  <div class='abs-badge'>
-                      <ion-icon name='time-outline' aria-hidden='true'></ion-icon>
-                      <span class='span'>3 Weeks</span> 
-                  </div>
-                  <div class='card-content'>
-                      <span class='badge'>Intermediate</span> 
-                      <h3 class='h3'>
-                          <a href='#' class='card-title'>{$course['Title']}</a>
-                      </h3>
-                      <div class='wrapper'>
-                          <div class='rating-wrapper'>
-                              <ion-icon name='star'></ion-icon>
-                              <ion-icon name='star'></ion-icon>
-                              <ion-icon name='star'></ion-icon>
-                              <ion-icon name='star'></ion-icon>
-                              <ion-icon name='star'></ion-icon>
-                          </div>
-                          <p class='rating-text'>(4.9 /7 Rating)</p> 
-                      </div>
-                      <data class='price' value='35'>$35.00</data> 
-                      <ul class='card-meta-list'>
-                          <li class='card-meta-item'>
-                              <ion-icon name='library-outline' aria-hidden='true'></ion-icon>
-                              <span class='span'>13 Lessons</span> 
-                          </li>
-                          <li class='card-meta-item'>
-                              <ion-icon name='people-outline' aria-hidden='true'></ion-icon>
-                              <span class='span'>18 Students</span> 
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          </li>";
+    <li>
+    <div class='course-card'>
+    <figure class='card-banner img-holder' style='--width: 370; --height: 220;'>
+      <img src='./assets/images/course-3.jpg' width='370' height='220' loading='lazy'
+        alt='The Complete Camtasia Course for Content Creators' class='img-cover'>
+    </figure>
+    <div class='abs-badge'>
+      <ion-icon name='time-outline' aria-hidden='true'></ion-icon>
+      <span class='span'>3 Weeks</span> 
+    </div>
+    <div class='card-content'>
+      <span class='badge'>{$course['Type']}</span> 
+          <h3 class='h3'>
+            <a href='course_detail.php?CID={$course['CID']}' class='card-title'>{$course['Title']}</a>
+          </h3>
+          
+          <data class='price' value=''>{$course['Duration']}</data> 
+          <ul class='card-meta-list'>
+            <li class='card-meta-item'>
+              <ion-icon name='location-outline' aria-hidden='true'></ion-icon>
+              <span class='span'>{$course['Location']}</span> 
+            </li>
+            <li class='card-meta-item'>
+              <ion-icon name='bookmark-outline' aria-hidden='true'></ion-icon>
+              <span class='span'>{$course['Category']}</span> 
+            </li>
+          </ul>
+        </div>
+      </div>
+    </li>";
     }
 
     
@@ -415,3 +416,61 @@ function filter_course_by_location($location)
     return [];
   }
 }
+
+
+function filter_course_by_category($category)
+{
+    $data = get_connection();
+    $course_data = $data['Course'];
+
+    $matching_courses = [];
+
+    foreach ($course_data as $course) {
+        if (isset($course['Category']) && stripos($course['Category'], $category) !== false) {
+            $matching_courses[] = $course;
+        }
+    }
+
+    if (!empty($matching_courses)) {
+        foreach ($matching_courses as $course) {
+            echo "
+        <li>
+        <div class='course-card'>
+        <figure class='card-banner img-holder' style='--width: 370; --height: 220;'>
+          <img src='./assets/images/course-3.jpg' width='370' height='220' loading='lazy'
+            alt='The Complete Camtasia Course for Content Creators' class='img-cover'>
+        </figure>
+        <div class='abs-badge'>
+          <ion-icon name='time-outline' aria-hidden='true'></ion-icon>
+          <span class='span'>3 Weeks</span> 
+        </div>
+        <div class='card-content'>
+          <span class='badge'>{$course['Type']}</span> 
+              <h3 class='h3'>
+                <a href='course_detail.php?CID={$course['CID']}' class='card-title'>{$course['Title']}</a>
+              </h3>
+              
+              <data class='price' value=''>{$course['Duration']}</data> 
+              <ul class='card-meta-list'>
+                <li class='card-meta-item'>
+                  <ion-icon name='location-outline' aria-hidden='true'></ion-icon>
+                  <span class='span'>{$course['Location']}</span> 
+                </li>
+                <li class='card-meta-item'>
+                  <ion-icon name='bookmark-outline' aria-hidden='true'></ion-icon>
+                  <span class='span'>{$course['Category']}</span> 
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>";
+        }
+
+        
+        return $matching_courses;
+    } else {
+        echo json_encode(['message' => 'Không tìm thấy khóa học cho danh mục chỉ định'], JSON_PRETTY_PRINT);
+        return [];
+    }
+}
+

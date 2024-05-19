@@ -10,48 +10,38 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     die(json_encode($data));
 }
 
-$data = json_decode(file_get_contents(filename: 'php://input'));
+// Lấy dữ liệu từ biểu mẫu gửi đi
+$cid = $_POST['CID'];
+$uid = $_POST['UID']; // Giữ nguyên UID
+$title = $_POST['Title'];
+$duration = $_POST['Duration'];
+$type = $_POST['Type'];
+$location = $_POST['Location'];
+$category = $_POST['Category'];
+$content = $_POST['Content'];
 
-if (is_null($data)) {
+// Kiểm tra dữ liệu trống
+if (empty($cid) || empty($uid) || empty($title) || empty($content)) {
     http_response_code(400);
-    die(json_encode(array('code' => 3, 'message' => 'JSON is null')));
-}
-if (
-    !property_exists($data, 'CID') ||
-    !property_exists($data, 'UID') ||
-    !property_exists($data, 'Title') ||
-    !property_exists($data, 'Content') ||
-    !property_exists($data, 'Date')
-) {
-    http_response_code(400);
-    die(json_encode(array('code' => 4, 'message' => 'Please provide full information of the course')));
-}
-
-if (
-    empty($data->CID) ||
-    empty($data->UID) ||
-    empty($data->Title) ||
-    empty($data->Content) ||
-    empty($data->Date)
-) {
-    http_response_code(400);
-    die(json_encode(array('code' => 5, 'message' => 'Your information is empty')));
+    die(json_encode(array('code' => 5, 'message' => 'Some information is empty')));
 }
 
-// $id = $_GET['id'];
-// $id = intval($id);
+// Tạo một đối tượng course từ dữ liệu đã nhận
+$course = (object) [
+    'CID' => $cid,
+    'UID' => $uid, // Giữ nguyên UID
+    'Title' => $title,
+    'Duration' => $duration,
+    'Type' => $type,
+    'Location' => $location,
+    'Category' => $category,
+    'Content' => $content,
+    'Date' => date('Y-m-d') // Tự động cập nhật ngày sửa
+];
 
-// if (!is_int($id)) {
-//     http_response_code(400);
-//     die(json_encode(array('code' => 5, 'message' => 'Please provide a valid product')));
-// }
+// Cập nhật vào cơ sở dữ liệu
+update_course($course);
 
-// if ($id < 1 || $id > 1000) {
-//     http_response_code(400);
-//     die(json_encode(array('code' => 5, 'message' => 'ID is out of range')));
-// }
-
-//db query
-update_course($data);
-die(json_encode(array('code' => 0, 'message' => 'Add product success')));
+header('Location: ManageCourse.php');
+echo json_encode(array('code' => 0, 'message' => 'Update success'));
 ?>
