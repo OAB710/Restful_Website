@@ -40,12 +40,12 @@
         {
             "CID": 1,
             "Title": "Introduction to Electronics",
-            "Content": "This course introduces the basics of electronics.",
             "Duration": "3 hours",
             "Type": "Beginner",
-            "Location": "Ho Chi Minh",
+            "Location": "Hahaha Chi Minh",
             "Category": "Electronics",
-            "Date": "2024-01-10"
+            "Content": "This course introduces the basics of electronics.",
+            "Date": "2024-05-19"
         },
         {
             "CID": 4,
@@ -114,7 +114,7 @@
             "Duration": "2 hours",
             "Type": "Beginner",
             "Location": "Vinh Long",
-            "Category": "Artificial Intelligence",
+            "Category": "Artificial ",
             "Date": "2024-11-05"
         },
         {
@@ -124,7 +124,7 @@
             "Duration": "2 hours",
             "Type": "Intermediate",
             "Location": "Tra Vinh",
-            "Category": "Machine Learning",
+            "Category": "Machine ",
             "Date": "2024-12-10"
         },
         {
@@ -144,7 +144,7 @@
             "Duration": "2 hours",
             "Type": "Intermediate",
             "Location": "Tien Giang",
-            "Category": "Cloud Computing",
+            "Category": "Cloud ",
             "Date": "2024-12-25"
         },
         {

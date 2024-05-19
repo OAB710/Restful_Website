@@ -38,6 +38,62 @@
   <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
   <link rel="preload" as="image" href="./assets/images/hero-shape-1.svg">
   <link rel="preload" as="image" href="./assets/images/hero-shape-2.png">
+  <style>
+        #location-btn {
+            box-sizing: border-box;
+            padding: 10px 20px;
+            border: 2px solid #000; /* Border width and color */
+            border-radius: 5px; /* Optional: Rounded corners */
+            background-color: #f8f9fa; /* Optional: Background color */
+            color: #000; /* Text color */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 40px;
+            transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+        }
+        #Category-btn {
+            box-sizing: border-box;
+            padding: 10px 20px;
+            border: 2px solid #000; /* Border width and color */
+            border-radius: 5px; /* Optional: Rounded corners */
+            background-color: #f8f9fa; /* Optional: Background color */
+            color: #000; /* Text color */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 40px;
+            transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+        }
+        .location-item, .Category-item {
+        box-sizing: border-box;
+        padding: 10px 20px;
+        border: 0.5px solid #000; /* Border width and color */
+        border-radius: 40px; /* Rounded corners */
+        background-color: #f8f9fa; /* Background color */
+        color: #000; /* Text color */
+        font-size: 16px; /* Font size */
+        cursor: pointer; /* Pointer cursor on hover */
+        transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+        display: inline-block; /* Ensure they align properly */
+        width: 150px; /* Fixed width */
+        height: 50px; /* Fixed height */
+        text-align: center; /* Center the text */
+        line-height: 30px; /* Center text vertically */
+        margin: 5px; /* Spacing between items */
+    }
+
+    .location-item:hover, .Category-item:hover {
+        background-color: #e2e6ea; /* Background color on hover */
+        color: #333; /* Text color on hover */
+    }
+        #location-btn:hover {
+            background-color: #e2e6ea; /* Background color on hover */
+            color: #333; /* Text color on hover */
+        }
+        #search-container:hover
+        {
+          background-color: #000;
+        }
+    </style>
 
 </head>
 
@@ -56,9 +112,7 @@
       <nav class="navbar" data-navbar>
 
         <div class="wrapper">
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="162" height="50" alt="EduWeb logo">
-          </a>
+          
 
           <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
             <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
@@ -122,7 +176,7 @@
           </button>
 
         </div>
-        <button type="button" id="location-btn" aria-label="Filter by Location">
+        <button style="box-sizing: border-box;" type="button" id="location-btn" aria-label="Filter by Location">
       Filter by Location
     </button>
     <div id="location-list" style="display: none;">
@@ -300,171 +354,167 @@
   -->
   <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
 
-    <div class="footer-top section">
-      <div class="container grid-list">
+<div class="footer-top section">
+  <div class="container grid-list">
 
-        <div class="footer-brand">
+    <div class="footer-brand">
 
-          <a href="#" class="logo">
-            <img src="./assets/images/logo-light.svg" width="162" height="50" alt="EduWeb logo">
+      
+
+      <p class="footer-brand-text">
+        Welcome to our website
+      </p>
+
+      <div class="wrapper">
+        <span class="span">Ins:</span>
+
+        <address class="address">522H0063@student.tdtu.edu.vn</address>
+      </div>
+
+      <div class="wrapper">
+        <span class="span">Call:</span>
+
+        <a href="tel:+011234567890" class="footer-link">+0903614098</a>
+      </div>
+
+      <div class="wrapper">
+        <span class="span">Email:</span>
+
+        <a href="mailto:info@eduweb.com" class="footer-link">522H0078@student.tdtu.edu.vn</a>
+      </div>
+
+    </div>
+
+    <ul class="footer-list">
+
+      <li>
+        <p class="footer-list-title">Online Platform</p>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">About</a>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">Courses</a>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">Instructor</a>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">Events</a>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">Instructor Profile</a>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">Purchase Guide</a>
+      </li>
+
+    </ul>
+
+    <ul class="footer-list">
+
+      <li>
+        <p class="footer-list-title">Links</p>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">Contact Us</a>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">Gallery</a>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">News & Articles</a>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">FAQ's</a>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">Sign In/Registration</a>
+      </li>
+
+      <li>
+        <a href="#" class="footer-link">Coming Soon</a>
+      </li>
+
+    </ul>
+
+    <div class="footer-list">
+
+      <p class="footer-list-title">Contacts</p>
+
+      <p class="footer-list-text">
+        Enter your email address to register to our newsletter subscription
+      </p>
+
+      <form action="" class="newsletter-form">
+        <input type="email" name="email_address" placeholder="Your email" required class="input-field">
+
+        <button type="submit" class="btn has-before">
+          <span class="span">Subscribe</span>
+
+          <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </form>
+
+      <ul class="social-list">
+
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-facebook"></ion-icon>
           </a>
+        </li>
 
-          <p class="footer-brand-text">
-            Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.
-          </p>
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
 
-          <div class="wrapper">
-            <span class="span">Add:</span>
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+        </li>
 
-            <address class="address">70-80 Upper St Norwich NR2</address>
-          </div>
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+        </li>
 
-          <div class="wrapper">
-            <span class="span">Call:</span>
+        <li>
+          <a href="#" class="social-link">
+            <ion-icon name="logo-youtube"></ion-icon>
+          </a>
+        </li>
 
-            <a href="tel:+011234567890" class="footer-link">+01 123 4567 890</a>
-          </div>
+      </ul>
 
-          <div class="wrapper">
-            <span class="span">Email:</span>
-
-            <a href="mailto:info@eduweb.com" class="footer-link">info@eduweb.com</a>
-          </div>
-
-        </div>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Online Platform</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">About</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Courses</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Instructor</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Events</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Instructor Profile</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Purchase Guide</a>
-          </li>
-
-        </ul>
-
-        <ul class="footer-list">
-
-          <li>
-            <p class="footer-list-title">Links</p>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Contact Us</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Gallery</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">News & Articles</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">FAQ's</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Sign In/Registration</a>
-          </li>
-
-          <li>
-            <a href="#" class="footer-link">Coming Soon</a>
-          </li>
-
-        </ul>
-
-        <div class="footer-list">
-
-          <p class="footer-list-title">Contacts</p>
-
-          <p class="footer-list-text">
-            Enter your email address to register to our newsletter subscription
-          </p>
-
-          <form action="" class="newsletter-form">
-            <input type="email" name="email_address" placeholder="Your email" required class="input-field">
-
-            <button type="submit" class="btn has-before">
-              <span class="span">Subscribe</span>
-
-              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-            </button>
-          </form>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-youtube"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
     </div>
 
-    <div class="footer-bottom">
-      <div class="container">
+  </div>
+</div>
 
-        <p class="copyright">
-          Copyright 2022 All Rights Reserved by <a href="#" class="copyright-link">codewithsadee</a>
-        </p>
+<div class="footer-bottom">
+  <div class="container">
 
-      </div>
-    </div>
+    
 
-  </footer>
+  </div>
+</div>
+
+</footer>
 
   <!-- 
     - #BACK TO TOP
