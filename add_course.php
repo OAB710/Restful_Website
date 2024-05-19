@@ -18,19 +18,35 @@ $location = $_POST['Location'] ?? null;
 $category = $_POST['Category'] ?? null;
 $date = date('Y-m-d');
 
-if (is_null($title) || is_null($content)) {
+if (is_null($title) || is_null($content) || is_null($duration) || is_null($type) || is_null($location) || is_null($category)) {
     http_response_code(400);
     die(json_encode(array('code' => 4, 'message' => 'Please provide full information of the course')));
 }
 
-if (empty($title) || empty($content)) {
+if (empty($title) || empty($content) || empty($duration) || empty($type) || empty($location) || empty($category)) {
     http_response_code(400);
     die(json_encode(array('code' => 5, 'message' => 'Your information is empty')));
 }
 
-$course = (object) array(
-    'CID' => 100,
-    'UID' => 100,
+
+function get_CIDs() {
+    $data = get_connection();
+  $course_data = $data['Course'];
+  foreach ($course_data as $course):
+    $course_ids[] = $course['CID'];
+  endforeach;
+  $maxCID = $course_ids[0];
+    foreach ($course_ids as $cid) {
+        if ($cid > $maxCID) {
+            $maxCID = $cid;
+        }
+    }
+    return $maxCID+1;
+}
+
+// Create new course object
+$course = array(
+    'CID' => get_CIDs(),
     'Title' => $title,
     'Content' => $content,
     'Duration' => $duration,
@@ -40,11 +56,9 @@ $course = (object) array(
     'Date' => $date
 );
 
-
-
-// Thêm course vào database
+// Add new course to the database
 add_course($course);
 
-header('Location: course.php');
-?>
+header('Location: ManageCourse.php');
 
+?>

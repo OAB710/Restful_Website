@@ -15,11 +15,11 @@ if ($method != 'DELETE') {
     die(json_encode($data));
 }
 
-$id = $_POST['CID']; // Since the form is actually sent as POST, get the ID from $_POST
+$id = $_POST['UID']; // Since the form is actually sent as POST, get the ID from $_POST
 //GET DATA FROM DATABASE
 delete_course($id);
 
 ?>
 <script>
-    window.location.href = 'ManageCourse.php';
+    window.location.href = 'ManageUser.php';
 </script>

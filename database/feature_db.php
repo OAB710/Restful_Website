@@ -1,25 +1,6 @@
 <?php
 require_once('connection.php');
 
-function get_id()
-{
-  // Lấy URL hiện tại từ request
-  $request_uri = $_SERVER['REQUEST_URI'];
-
-  // Lấy tên file script
-  $script_name = $_SERVER['SCRIPT_NAME'];
-
-  // Loại bỏ tên script khỏi URL để lấy phần còn lại của đường dẫn
-  $path = str_replace($script_name, '', $request_uri);
-
-  // Tách các phần của đường dẫn bằng dấu '/'
-  $path_parts = explode('/', trim($path, '/'));
-
-  // Lấy phần cuối cùng của đường dẫn, thường là ID
-  $id = end($path_parts);
-
-  return $id;
-}
 function get_title()
 {
   // Lấy URL hiện tại từ request
@@ -71,6 +52,18 @@ function get_courses()
   return $course_data;
 }
 
+function find_highest_cid($courses) {
+  $maxCID = 0;
+  foreach ($courses as $course) {
+      if (isset($course['CID']) && $course['CID'] > $maxCID) {
+          $maxCID = $course['CID'];
+      }
+  }
+  return $maxCID;
+}
+
+
+
 function showAllCourse()
 {
   $course_data = get_courses();
@@ -121,6 +114,16 @@ function add_course($course)
   file_put_contents('database/db.json', $data);
 }
 
+function add_user($user)
+{
+  $data = get_connection();
+  $user_data = $data['User'];
+  $user_data[] = $user;
+  $data['User'] = $user_data;
+  $data = json_encode($data, JSON_PRETTY_PRINT);
+  file_put_contents('database/db.json', $data);
+}
+
 function admin_get_users()
 {
   $data = get_connection();
@@ -134,7 +137,13 @@ function admin_get_users()
                   <td>{$user['Email']}</td>
                   <td>
                       <a style='padding: 2px;' href='aloo.html'><i class='fa-solid fa-pencil' style='color: #74C0FC;'></i></a>
-                      <a href='#'><i class='fa-solid fa-trash' style='color: #74C0FC;'></i></a>
+                      <form action='delete_user.php' method='POST' style='display:inline;'>
+                              <input type='hidden' name='_method' value='DELETE'>
+                              <input type='hidden' name='UID' value='{$user['UID']}'>
+                              <button type='submit' style='background:none; border:none; padding:0;'>
+                                  <i class='fa-solid fa-trash' style='color: #74C0FC; cursor: pointer;'></i>
+                              </button>
+                          </form> 
                   </td>
               </tr>
           </tbody>";
@@ -150,7 +159,6 @@ function admin_get_courses()
     echo "<tbody>
               <tr>
                   <td>{$course['CID']}</td>
-                  <td>{$course['UID']}</td>
                   <td>{$course['Title']}</td>
                   <td>{$course['Content']}</td>
                   <td>{$course['Duration']}</td>
@@ -166,7 +174,7 @@ function admin_get_courses()
                               <button type='submit' style='background:none; border:none; padding:0;'>
                                   <i class='fa-solid fa-trash' style='color: #74C0FC; cursor: pointer;'></i>
                               </button>
-                          </form>
+                          </form> 
                   </td>
               </tr>
           </tbody>";
@@ -254,6 +262,29 @@ function delete_course($id)
 
   // Assign the updated course data back to the main data array
   $data['Course'] = $updated_course_data;
+
+  // Encode the data back to JSON and save it to the file
+  $data = json_encode($data, JSON_PRETTY_PRINT);
+  file_put_contents('database/db.json', $data);
+}
+
+function delete_user($id)
+{
+  require_once('connection.php');
+  $data = get_connection();
+  $user_data = $data['User'];
+
+  // Create a new array to hold Users that are not deleted
+  $updated_user_data = [];
+
+  foreach ($user_data as $user) {
+    if ($user['UID'] != $id) {
+      $updated_user_data[] = $user;
+    }
+  }
+
+  // Assign the updated user data back to the main data array
+  $data['User'] = $updated_user_data;
 
   // Encode the data back to JSON and save it to the file
   $data = json_encode($data, JSON_PRETTY_PRINT);

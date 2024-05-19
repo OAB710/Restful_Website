@@ -3,38 +3,42 @@
         {
             "UID": 1,
             "UName": "john_doe",
-            "Email": "john@example.com",
-            "Password": "password123"
+            "Email": "john@example.com"
         },
         {
             "UID": 2,
             "UName": "jane_smith",
-            "Email": "jane@example.com",
-            "Password": "abc123"
+            "Email": "jane@example.com"
         },
         {
             "UID": 3,
             "UName": "alice_jones",
-            "Email": "alice@example.com",
-            "Password": "alice2024"
+            "Email": "alice@example.com"
         },
         {
             "UID": 4,
             "UName": "bob_brown",
-            "Email": "bob@example.com",
-            "Password": "bob2024"
+            "Email": "bob@example.com"
         },
         {
             "UID": 5,
             "UName": "charlie_clark",
-            "Email": "charlie@example.com",
-            "Password": "charlie2024"
+            "Email": "charlie@example.com"
+        },
+        {
+            "UID": 1,
+            "UName": "hj",
+            "Email": "jh"
+        },
+        {
+            "UID": 6,
+            "UName": "\u00e1\u0111\u00e1",
+            "Email": "\u00e1\u0111asd"
         }
     ],
     "Course": [
         {
             "CID": 1,
-            "UID": 1,
             "Title": "Introduction to Electronics",
             "Content": "This course introduces the basics of electronics.",
             "Duration": "3 hours",
@@ -44,30 +48,7 @@
             "Date": "2024-01-10"
         },
         {
-            "CID": 2,
-            "UID": 1,
-            "Title": "Introduction to Software",
-            "Content": "This course introduces the basics of software development.",
-            "Duration": "5 hours",
-            "Type": "Beginner",
-            "Location": "Ha Noi",
-            "Category": "Software",
-            "Date": "2024-02-15"
-        },
-        {
-            "CID": 3,
-            "UID": 2,
-            "Title": "Advanced Electronics",
-            "Content": "This course covers Advanced topics in electronics.",
-            "Duration": "1 hour",
-            "Type": "Advanced",
-            "Location": "Da Nang",
-            "Category": "Electronics",
-            "Date": "2024-03-20"
-        },
-        {
             "CID": 4,
-            "UID": 2,
             "Title": "Basic Home Decor",
             "Content": "This course covers the basics of home decor.",
             "Duration": "2 hours",
@@ -78,7 +59,6 @@
         },
         {
             "CID": 5,
-            "UID": 3,
             "Title": "Gardening 101",
             "Content": "This course covers the basics of gardening.",
             "Duration": "2 hours",
@@ -88,19 +68,7 @@
             "Date": "2024-05-30"
         },
         {
-            "CID": 6,
-            "UID": 3,
-            "Title": "Advanced Gardening",
-            "Content": "This course covers Advanced gardening techniques.",
-            "Duration": "2 hours",
-            "Type": "Advanced",
-            "Location": "Hue",
-            "Category": "Gardening",
-            "Date": "2024-06-05"
-        },
-        {
             "CID": 7,
-            "UID": 4,
             "Title": "Cooking Basics",
             "Content": "This course introduces basic cooking techniques.",
             "Duration": "2 hours",
@@ -111,7 +79,6 @@
         },
         {
             "CID": 8,
-            "UID": 4,
             "Title": "Advanced Cooking",
             "Content": "This course covers Advanced cooking techniques.",
             "Duration": "2 hours",
@@ -122,7 +89,6 @@
         },
         {
             "CID": 9,
-            "UID": 5,
             "Title": "Photography Basics",
             "Content": "This course covers the basics of photography.",
             "Duration": "2 hours",
@@ -133,7 +99,6 @@
         },
         {
             "CID": 10,
-            "UID": 5,
             "Title": "Advanced Photography",
             "Content": "This course covers Advanced photography techniques.",
             "Duration": "2 hours",
@@ -144,7 +109,6 @@
         },
         {
             "CID": 11,
-            "UID": 1,
             "Title": "Introduction to AI",
             "Content": "This course introduces the basics of artificial intelligence.",
             "Duration": "2 hours",
@@ -155,7 +119,6 @@
         },
         {
             "CID": 12,
-            "UID": 2,
             "Title": "Machine Learning Basics",
             "Content": "This course covers the basics of machine learning.",
             "Duration": "2 hours",
@@ -166,7 +129,6 @@
         },
         {
             "CID": 13,
-            "UID": 3,
             "Title": "Data Science Introduction",
             "Content": "This course introduces the basics of data science.",
             "Duration": "2 hours",
@@ -177,7 +139,6 @@
         },
         {
             "CID": 14,
-            "UID": 4,
             "Title": "Cloud Computing Basics",
             "Content": "This course covers the basics of cloud computing.",
             "Duration": "2 hours",
@@ -188,7 +149,6 @@
         },
         {
             "CID": 15,
-            "UID": 5,
             "Title": "Cybersecurity Fundamentals",
             "Content": "This course introduces the basics of cybersecurity.",
             "Duration": "2 hours",
@@ -196,17 +156,6 @@
             "Location": "Kien Giang",
             "Category": "Cybersecurity",
             "Date": "2024-12-30"
-        },
-        {
-            "CID": 100,
-            "UID": 100,
-            "Title": "d",
-            "Content": "s",
-            "Duration": "",
-            "Type": "f",
-            "Location": "g",
-            "Category": "h",
-            "Date": "2024-05-19"
         }
     ]
 }

@@ -36,16 +36,9 @@
                 </li>
 
                 <li>
-                <a href="admin.php">
-                        <span class="icon">
-                            <ion-icon name="home-outline"></ion-icon>
-                        </span>
-                        <span class="title">Dashboard</span>
-                    </a>
-                </li>
 
                 <li>
-                    <a href="ManageUser.php">
+                    <a href="admin.php">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -98,7 +91,6 @@
                         <thead>
                             <tr>
                                 <td>ID</td>
-                                <td>Author</td>
                                 <td>Title</td>
                                 <td>Content</td>
                                 <td>Duration</td>
