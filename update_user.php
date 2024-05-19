@@ -31,5 +31,5 @@ $user = (object) [
 // Cập nhật vào cơ sở dữ liệu
 update_user($user);
 
-header('Location: ManageUser.php');
+header('Location: admin.php');
 ?>

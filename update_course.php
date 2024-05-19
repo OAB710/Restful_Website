@@ -12,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 
 // Lấy dữ liệu từ biểu mẫu gửi đi
 $cid = $_POST['CID'];
-$uid = $_POST['UID']; // Giữ nguyên UID
 $title = $_POST['Title'];
 $duration = $_POST['Duration'];
 $type = $_POST['Type'];
@@ -21,7 +20,7 @@ $category = $_POST['Category'];
 $content = $_POST['Content'];
 
 // Kiểm tra dữ liệu trống
-if (empty($cid) || empty($uid) || empty($title) || empty($content)) {
+if (empty($cid) || empty($title) || empty($duration) || empty($type) || empty($location) || empty($category) || empty($content)){
     http_response_code(400);
     die(json_encode(array('code' => 5, 'message' => 'Some information is empty')));
 }
