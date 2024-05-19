@@ -40,14 +40,8 @@
             "Duration": "2 hours",
             "Type": "Beginner",
             "Location": "Ho Chi Minh",
-            "Category": [
-                {
-                    "CAName": "Electronics"
-                },
-                {
-                    "CAName": "Engineering"
-                }
-            ]
+            "Category": "Electronics",
+            "Date": "2024-01-10"
         },
         {
             "CID": 2,
@@ -57,14 +51,8 @@
             "Duration": "2 hours",
             "Type": "Beginner",
             "Location": "Ha Noi",
-            "Category": [
-                {
-                    "CAName": "Software"
-                },
-                {
-                    "CAName": "Technology"
-                }
-            ]
+            "Category": "Software",
+            "Date": "2024-02-15"
         },
         {
             "CID": 3,
@@ -74,14 +62,8 @@
             "Duration": "2 hours",
             "Type": "Advanced",
             "Location": "Da Nang",
-            "Category": [
-                {
-                    "CAName": "Electronics"
-                },
-                {
-                    "CAName": "Engineering"
-                }
-            ]
+            "Category": "Electronics",
+            "Date": "2024-03-20"
         },
         {
             "CID": 4,
@@ -91,14 +73,8 @@
             "Duration": "2 hours",
             "Type": "Beginner",
             "Location": "Can Tho",
-            "Category": [
-                {
-                    "CAName": "Home Decor"
-                },
-                {
-                    "CAName": "Lifestyle"
-                }
-            ]
+            "Category": "Home Decor",
+            "Date": "2024-04-25"
         },
         {
             "CID": 5,
@@ -108,14 +84,8 @@
             "Duration": "2 hours",
             "Type": "Beginner",
             "Location": "Hai Phong",
-            "Category": [
-                {
-                    "CAName": "Gardening"
-                },
-                {
-                    "CAName": "Hobby"
-                }
-            ]
+            "Category": "Gardening",
+            "Date": "2024-05-30"
         },
         {
             "CID": 6,
@@ -125,14 +95,8 @@
             "Duration": "2 hours",
             "Type": "Advanced",
             "Location": "Hue",
-            "Category": [
-                {
-                    "CAName": "Gardening"
-                },
-                {
-                    "CAName": "Hobby"
-                }
-            ]
+            "Category": "Gardening",
+            "Date": "2024-06-05"
         },
         {
             "CID": 7,
@@ -142,14 +106,8 @@
             "Duration": "2 hours",
             "Type": "Beginner",
             "Location": "Quang Ninh",
-            "Category": [
-                {
-                    "CAName": "Cooking"
-                },
-                {
-                    "CAName": "Lifestyle"
-                }
-            ]
+            "Category": "Cooking",
+            "Date": "2024-07-10"
         },
         {
             "CID": 8,
@@ -159,14 +117,8 @@
             "Duration": "2 hours",
             "Type": "Advanced",
             "Location": "Dak Lak",
-            "Category": [
-                {
-                    "CAName": "Cooking"
-                },
-                {
-                    "CAName": "Lifestyle"
-                }
-            ]
+            "Category": "Cooking",
+            "Date": "2024-08-15"
         },
         {
             "CID": 9,
@@ -176,14 +128,8 @@
             "Duration": "2 hours",
             "Type": "Beginner",
             "Location": "Binh Thuan",
-            "Category": [
-                {
-                    "CAName": "Photography"
-                },
-                {
-                    "CAName": "Art"
-                }
-            ]
+            "Category": "Photography",
+            "Date": "2024-09-20"
         },
         {
             "CID": 10,
@@ -193,14 +139,8 @@
             "Duration": "2 hours",
             "Type": "Advanced",
             "Location": "Lam Dong",
-            "Category": [
-                {
-                    "CAName": "Photography"
-                },
-                {
-                    "CAName": "Art"
-                }
-            ]
+            "Category": "Photography",
+            "Date": "2024-10-25"
         },
         {
             "CID": 11,
@@ -210,14 +150,8 @@
             "Duration": "2 hours",
             "Type": "Beginner",
             "Location": "Vinh Long",
-            "Category": [
-                {
-                    "CAName": "Artificial Intelligence"
-                },
-                {
-                    "CAName": "Technology"
-                }
-            ]
+            "Category": "Artificial Intelligence",
+            "Date": "2024-11-05"
         },
         {
             "CID": 12,
@@ -227,14 +161,8 @@
             "Duration": "2 hours",
             "Type": "Intermediate",
             "Location": "Tra Vinh",
-            "Category": [
-                {
-                    "CAName": "Machine Learning"
-                },
-                {
-                    "CAName": "Technology"
-                }
-            ]
+            "Category": "Machine Learning",
+            "Date": "2024-12-10"
         },
         {
             "CID": 13,
@@ -244,14 +172,8 @@
             "Duration": "2 hours",
             "Type": "Intermediate",
             "Location": "Bac Lieu",
-            "Category": [
-                {
-                    "CAName": "Data Science"
-                },
-                {
-                    "CAName": "Technology"
-                }
-            ]
+            "Category": "Data Science",
+            "Date": "2024-12-20"
         },
         {
             "CID": 14,
@@ -261,14 +183,8 @@
             "Duration": "2 hours",
             "Type": "Intermediate",
             "Location": "Tien Giang",
-            "Category": [
-                {
-                    "CAName": "Cloud Computing"
-                },
-                {
-                    "CAName": "Technology"
-                }
-            ]
+            "Category": "Cloud Computing",
+            "Date": "2024-12-25"
         },
         {
             "CID": 15,
@@ -278,24 +194,19 @@
             "Duration": "2 hours",
             "Type": "Advanced",
             "Location": "Kien Giang",
-            "Category": [
-                {
-                    "CAName": "Cybersecurity"
-                },
-                {
-                    "CAName": "Technology"
-                }
-            ]
+            "Category": "Cybersecurity",
+            "Date": "2024-12-30"
         },
         {
             "CID": 100,
             "UID": 100,
-            "Title": "sd",
-            "Content": "sd",
-            "Duration": "sd",
-            "Type": "sd",
-            "Location": "sd",
-            "Date": "2024-05-18"
+            "Title": "d",
+            "Content": "s",
+            "Duration": "",
+            "Type": "f",
+            "Location": "g",
+            "Category": "h",
+            "Date": "2024-05-19"
         }
     ]
 }

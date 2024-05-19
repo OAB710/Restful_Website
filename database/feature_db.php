@@ -46,12 +46,18 @@ function showAllCourse()
               <ion-icon name='location-outline' aria-hidden='true'></ion-icon>
               <span class='span'>{$course['Location']}</span> 
             </li>
+            <li class='card-meta-item'>
+              <ion-icon name='bookmark-outline' aria-hidden='true'></ion-icon>
+              <span class='span'>{$course['Category']}</span> 
+            </li>
           </ul>
         </div>
       </div>
     </li>";
   endforeach;
 }
+
+
 
 function add_course($course)
 {
@@ -61,6 +67,58 @@ function add_course($course)
   $data['Course'] = $course_data;
   $data = json_encode($data, JSON_PRETTY_PRINT);
   file_put_contents('database/db.json', $data);
+}
+
+function admin_get_users()
+{
+  $data = get_connection();
+  $user_data = $data['User'];
+  foreach ($user_data as $user):
+
+    echo "<tbody>
+              <tr>
+                  <td>{$user['UID']}</td>
+                  <td>{$user['UName']}</td>
+                  <td>{$user['Email']}</td>
+                  <td>
+                      <a style='padding: 2px;' href='aloo.html'><i class='fa-solid fa-pencil' style='color: #74C0FC;'></i></a>
+                      <a href='#'><i class='fa-solid fa-trash' style='color: #74C0FC;'></i></a>
+                  </td>
+              </tr>
+          </tbody>";
+  endforeach;
+}
+
+function admin_get_courses()
+{
+  $data = get_connection();
+  $course_data = $data['Course'];
+  foreach ($course_data as $course):
+
+    echo "<tbody>
+              <tr>
+                  <td>{$course['CID']}</td>
+                  <td>{$course['UID']}</td>
+                  <td>{$course['Title']}</td>
+                  <td>{$course['Content']}</td>
+                  <td>{$course['Duration']}</td>
+                  <td>{$course['Type']}</td>
+                  <td>{$course['Location']}</td>
+                  <td>{$course['Category']}</td>
+                  <td>{$course['Date']}</td>
+                  <td>
+                      <a style='padding: 2px;' href='#'><i class='fa-solid fa-pencil' style='color: #74C0FC;'></i></a>
+                      <form action='delete_course.php' method='POST' style='display:inline;'>
+                              <input type='hidden' name='_method' value='DELETE'>
+                              <input type='hidden' name='CID' value='{$course['CID']}'>
+                              <button type='submit' style='background:none; border:none; padding:0;'>
+                                  <i class='fa-solid fa-trash' style='color: #74C0FC; cursor: pointer;'></i>
+                              </button>
+                          </form>
+                  </td>
+              </tr>
+          </tbody>";
+  endforeach;
 }
 
 function get_course($id)

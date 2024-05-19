@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/formpostcourse_style.css" />
+    <link rel="stylesheet" href="assets/css/formpostcourse_style.css" />
   </head>
   <body>
     <div class="container">
@@ -31,6 +31,10 @@
           <div class="input">
             <input type="text" name="Location" class="input-field"  />
             <label class="input-label">Location</label>
+          </div>
+          <div class="input">
+            <input type="text" name="Category" class="input-field"  />
+            <label class="input-label">Category</label>
           </div>
           <div class="input">
             <textarea

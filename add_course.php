@@ -15,6 +15,7 @@ $content = $_POST['Content'] ?? null;
 $duration = $_POST['Duration'] ?? null;
 $type = $_POST['Type'] ?? null;
 $location = $_POST['Location'] ?? null;
+$category = $_POST['Category'] ?? null;
 $date = date('Y-m-d');
 
 if (is_null($title) || is_null($content)) {
@@ -35,6 +36,7 @@ $course = (object) array(
     'Duration' => $duration,
     'Type' => $type,
     'Location' => $location,
+    'Category' => $category,
     'Date' => $date
 );
 
@@ -43,8 +45,6 @@ $course = (object) array(
 // Thêm course vào database
 add_course($course);
 
+header('Location: course.php');
 ?>
 
-<script>
-              window.location.href = 'course.php';
-            </script>
