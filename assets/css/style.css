@@ -1392,3 +1392,32 @@ body {
   }
 
 }
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+#course-search {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-right: none; /* Remove right border */
+  border-radius: 5px 0 0 5px;
+  flex: 1;
+  height: 40px; /* Set a fixed height */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#search-btn {
+  background: none;
+  border: 1px solid #ccc;
+  border-left: none; /* Remove left border */
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; /* Match the height of the input field */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
