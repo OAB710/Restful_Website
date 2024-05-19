@@ -17,9 +17,9 @@ if ($method != 'DELETE') {
 
 $id = $_POST['UID']; // Since the form is actually sent as POST, get the ID from $_POST
 //GET DATA FROM DATABASE
-delete_course($id);
+delete_user($id);
 
 ?>
 <script>
-    window.location.href = 'ManageUser.php';
+    window.location.href = 'admin.php';
 </script>

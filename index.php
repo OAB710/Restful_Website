@@ -27,7 +27,7 @@
     <div class="container">
 
       
-      <a class="logo" href=""><img style="height: auto; width: 25%" src="./assets/images/logo.png" alt="" ></a> 
+      <a class="logo" href="index.php"><img style="height: auto; width: 25%" src="./assets/images/logo.png" alt="" ></a> 
 
       <nav class="navbar" data-navbar>
 
@@ -44,7 +44,7 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+            <a href="index.php" class="navbar-link" data-nav-link>Home</a>
           </li>
 
           <li class="navbar-item">
@@ -52,7 +52,7 @@
           </li>
 
           <li class="navbar-item">
-            <a href="course.html" class="navbar-link" data-nav-link>Courses</a>
+            <a href="course.php" class="navbar-link" data-nav-link>Courses</a>
           </li>
 
           <li class="navbar-item">

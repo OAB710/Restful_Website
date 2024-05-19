@@ -1,11 +1,6 @@
 {
     "User": [
         {
-            "UID": 1,
-            "UName": "john_doe",
-            "Email": "john@example.com"
-        },
-        {
             "UID": 2,
             "UName": "jane_smith",
             "Email": "jane@example.com"
@@ -19,34 +14,9 @@
             "UID": 4,
             "UName": "bob_brown",
             "Email": "bob@example.com"
-        },
-        {
-            "UID": 5,
-            "UName": "charlie_clark",
-            "Email": "charlie@example.com"
-        },
-        {
-            "UID": 1,
-            "UName": "hj",
-            "Email": "jh"
-        },
-        {
-            "UID": 6,
-            "UName": "\u00e1\u0111\u00e1",
-            "Email": "\u00e1\u0111asd"
         }
     ],
     "Course": [
-        {
-            "CID": 1,
-            "Title": "Introduction to Electronics",
-            "Duration": "3 hours",
-            "Type": "Beginner",
-            "Location": "Hahaha Chi Minh",
-            "Category": "Electronics",
-            "Content": "This course introduces the basics of electronics.",
-            "Date": "2024-05-19"
-        },
         {
             "CID": 4,
             "Title": "Basic Home Decor",
@@ -56,16 +26,6 @@
             "Location": "Can Tho",
             "Category": "Home Decor",
             "Date": "2024-04-25"
-        },
-        {
-            "CID": 5,
-            "Title": "Gardening 101",
-            "Content": "This course covers the basics of gardening.",
-            "Duration": "2 hours",
-            "Type": "Beginner",
-            "Location": "Hai Phong",
-            "Category": "Gardening",
-            "Date": "2024-05-30"
         },
         {
             "CID": 7,
@@ -146,16 +106,6 @@
             "Location": "Tien Giang",
             "Category": "Cloud ",
             "Date": "2024-12-25"
-        },
-        {
-            "CID": 15,
-            "Title": "Cybersecurity Fundamentals",
-            "Content": "This course introduces the basics of cybersecurity.",
-            "Duration": "2 hours",
-            "Type": "Advanced",
-            "Location": "Kien Giang",
-            "Category": "Cybersecurity",
-            "Date": "2024-12-30"
         }
     ]
 }
