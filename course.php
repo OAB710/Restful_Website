@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,9 +28,7 @@
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;800&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- 
     - preload images
@@ -56,8 +51,7 @@
     <div class="container">
 
 
-      <a class="logo" href=""><img style="height: auto; width: 25%"
-          src="Abstract Red Rooster Farm Free Logo (4) (1).png" alt=""></a>
+      <a class="logo" href=""><img style="height: auto; width: 25%" src="Abstract Red Rooster Farm Free Logo (4) (1).png" alt=""></a>
 
       <nav class="navbar" data-navbar>
 
@@ -120,16 +114,145 @@
         - #COURSE
       -->
     <section class='section course' id='courses' aria-label='course'>
+
       <div class='container'>
+        <div class="search-container">
+          <input type="text" id="course-search" placeholder="Search for courses..."><button type="submit" id="search-btn" aria-label="Search">
+            <ion-icon id="iconsearch" name="search-outline"></ion-icon>
+          </button>
+
+        </div>
+        <button type="button" id="location-btn" aria-label="Filter by Location">
+      Filter by Location
+    </button>
+    <div id="location-list" style="display: none;">
+      <!-- List of locations will be populated here -->
+    </div>
+        <button type="button" id="Category-btn" aria-label="Filter by Category">
+      Filter by Category
+    </button>
+    <div id="Category-list" style="display: none;">
+      
+    </div>
         <p class='section-subtitle'>Popular Courses</p>
         <h2 class='h2 section-title'>Pick A Course To Get Started</h2>
-        <ul class='grid-list'>
+        <ul class='grid-list' id="search">
           <?php
-          require_once ('get_courses.php');
+          require_once('get_courses.php');
           ?>
         </ul>
       </div>
     </section>
+    <script>
+      document.getElementById('search-btn').addEventListener('click', function() {
+        // Lấy giá trị từ ô input
+        var searchValue = document.getElementById('course-search').value;
+
+        // Tạo một request HTTP mới
+        var xhr = new XMLHttpRequest();
+
+        // Xác định phương thức và URL của request
+        var tmp = xhr.open('GET', 'search.php?Title=' + searchValue, true);
+
+        // Đặt hàm xử lý cho sự kiện load
+        xhr.onload = function() {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            // Nếu request thành công, hiển thị kết quả tìm kiếm
+            document.getElementById('search').innerHTML = xhr.responseText;
+          } else {
+            // Nếu request không thành công, hiển thị thông báo lỗi
+            console.error('Request failed with status', xhr.status);
+          }
+        };
+
+        // Gửi request
+        xhr.send();
+      });
+    </script>
+    <script>
+        document.getElementById('location-btn').addEventListener('click', function() {
+    var locationList = document.getElementById('location-list');
+    if (locationList.style.display === 'none' || locationList.innerHTML === '') {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'get_locations.php', true);
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          var locations = JSON.parse(xhr.responseText);
+          locationList.innerHTML = '';
+          locations.forEach(function(location) {
+            var locationItem = document.createElement('button');
+            locationItem.textContent = location;
+            locationItem.classList.add('location-item');
+            locationList.appendChild(locationItem);
+            locationItem.addEventListener('click', function() {
+              filterCoursesByLocation(location);
+            });
+          });
+          locationList.style.display = 'block';
+        } else {
+          console.error('Request failed with status', xhr.status);
+        }
+      };
+      xhr.send();
+    } else {
+      locationList.style.display = locationList.style.display === 'block' ? 'none' : 'block';
+    }
+  });
+
+      function filterCoursesByLocation(location) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'filterLocation.php?Location=' + location, true);
+        xhr.onload = function() {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            document.getElementById('search').innerHTML = xhr.responseText;
+          } else {
+            console.error('Request failed with status', xhr.status);
+          }
+        };
+        xhr.send();
+      }
+        document.getElementById('Category-btn').addEventListener('click', function() {
+    var CategoryList = document.getElementById('Category-list');
+    if (CategoryList.style.display === 'none' || CategoryList.innerHTML === '') {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'get_Category.php', true);
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          var Categorys = JSON.parse(xhr.responseText);
+          CategoryList.innerHTML = '';
+          Categorys.forEach(function(Category) {
+            var CategoryItem = document.createElement('button');
+            CategoryItem.textContent = Category;
+            CategoryItem.classList.add('Category-item');
+            CategoryList.appendChild(CategoryItem);
+            CategoryItem.addEventListener('click', function() {
+              filterCoursesByCategory(Category);
+            });
+          });
+          CategoryList.style.display = 'block';
+        } else {
+          console.error('Request failed with status', xhr.status);
+        }
+      };
+      xhr.send();
+    } else {
+      CategoryList.style.display = CategoryList.style.display === 'block' ? 'none' : 'block';
+    }
+  });
+
+      function filterCoursesByCategory(Category) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', 'filterCategory.php?Category=' + Category, true);
+        xhr.onload = function() {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            document.getElementById('search').innerHTML = xhr.responseText;
+          } else {
+            console.error('Request failed with status', xhr.status);
+          }
+        };
+        xhr.send();
+      }
+    </script>
     <!-- 
         - #STATE
       -->
