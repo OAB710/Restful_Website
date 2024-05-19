@@ -150,7 +150,7 @@ function admin_get_users()
                   <td>{$user['UName']}</td>
                   <td>{$user['Email']}</td>
                   <td>
-                      <a style='padding: 2px;' href='aloo.html'><i class='fa-solid fa-pencil' style='color: #74C0FC;'></i></a>
+                  <a style='padding: 2px;' href='formEditUser.php?UID={$user['UID']}'><i class='fa-solid fa-pencil' style='color: #74C0FC;'></i></a>
                       <a href='#'><i class='fa-solid fa-trash' style='color: #74C0FC;'></i></a>
                   </td>
               </tr>
@@ -313,6 +313,29 @@ function update_course($course)
   $json_data = json_encode($data, JSON_PRETTY_PRINT);
   file_put_contents('database/db.json', $json_data);
 }
+function update_user($user)
+{
+    // Convert the stdClass object to an array
+    $user_array = json_decode(json_encode($user), true);
+
+    // Lấy dữ liệu từ cơ sở dữ liệu
+    $data = get_connection();
+    $user_data = $data['User'];
+
+    // Duyệt qua danh sách người dùng và cập nhật thông tin người dùng cần sửa
+    foreach ($user_data as $key => $u) {
+        if ($u['UID'] == $user_array['UID']) {
+            $user_data[$key] = $user_array;
+            break; // Không cần tiếp tục duyệt khi đã tìm thấy và cập nhật người dùng
+        }
+    }
+
+    // Lưu lại dữ liệu đã cập nhật vào cơ sở dữ liệu
+    $data['User'] = $user_data;
+    $json_data = json_encode($data, JSON_PRETTY_PRINT);
+    file_put_contents('database/db.json', $json_data);
+}
+
 function search_course_by_title($title)
 {
   $data = get_connection();
