@@ -8,7 +8,7 @@ if ($method == 'POST' && isset($_POST['_method']) && $_POST['_method'] == 'DELET
 }
 
 if ($method != 'DELETE') {
-    $data = array();
+    $data = array();    
     $data['code'] = 2;
     $data['message'] = 'This method is not supported: ' . $_SERVER['REQUEST_METHOD'];
     http_response_code(405);

@@ -50,10 +50,6 @@ if (!$user) {
                 <input type="text" name="Email" class="input-field" value="<?php echo $user['Email']; ?>" />
                 <label class="input-label">Email</label>
             </div>
-            <div class="input">
-                <input type="password" name="Password" class="input-field" value="<?php echo $user['Password']; ?>" />
-                <label class="input-label">Password</label>
-            </div>
             <div class="action">
                 <button type="submit" class="action-button">Update User</button>
             </div>

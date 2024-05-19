@@ -14,10 +14,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
 $uid = $_POST['UID'];
 $uname = $_POST['UName'];
 $email = $_POST['Email'];
-$password = $_POST['Password'];
 
 // Kiểm tra dữ liệu trống
-if (empty($uid) || empty($uname) || empty($email) || empty($password)) {
+if (empty($uid) || empty($uname) || empty($email)) {
     http_response_code(400);
     die(json_encode(array('code' => 5, 'message' => 'Some information is empty')));
 }
@@ -27,7 +26,6 @@ $user = (object) [
     'UID' => $uid,
     'UName' => $uname,
     'Email' => $email,
-    'Password' => $password
 ];
 
 // Cập nhật vào cơ sở dữ liệu

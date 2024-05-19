@@ -66,7 +66,7 @@ if (!$course) {
             <textarea name="Content" class="input-field" rows="5" style="resize: none; overflow: hidden"><?php echo $course['Content']; ?></textarea>
             <label class="input-label">Content</label>
           </div>
-          <input type="hidden" name="UID" value="<?php echo $course['UID']; ?>">
+          <input type="hidden" name="UID" value="<?php echo $course['CID']; ?>">
 
           <div class="action">
             <button type="submit" class="action-button">Update Course</button>

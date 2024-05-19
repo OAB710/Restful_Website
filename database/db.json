@@ -18,14 +18,15 @@
     ],
     "Course": [
         {
-            "CID": 4,
+            "CID": "4",
+            "UID": "4",
             "Title": "Basic Home Decor",
-            "Content": "This course covers the basics of home decor.",
             "Duration": "2 hours",
             "Type": "Beginner",
             "Location": "Can Tho",
-            "Category": "Home Decor",
-            "Date": "2024-04-25"
+            "Category": "Home Decorate",
+            "Content": "This course covers the basics of home decor.",
+            "Date": "2024-05-19"
         },
         {
             "CID": 7,
@@ -96,16 +97,6 @@
             "Location": "Bac Lieu",
             "Category": "Data Science",
             "Date": "2024-12-20"
-        },
-        {
-            "CID": 14,
-            "Title": "Cloud Computing Basics",
-            "Content": "This course covers the basics of cloud computing.",
-            "Duration": "2 hours",
-            "Type": "Intermediate",
-            "Location": "Tien Giang",
-            "Category": "Cloud ",
-            "Date": "2024-12-25"
         }
     ]
 }
